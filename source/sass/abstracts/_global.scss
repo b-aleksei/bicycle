@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  min-width: 320px;
+  margin: 0;
+  //color: $black;
+}
+
+.body-lock {
+  overflow-y: scroll;
+  position:fixed;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+/*  @include viewport--lg {
+    padding: 0 32px;
+  }
+
+  @include viewport--md {
+    padding: 0 24px;
+  }
+
+  @include viewport--sm {
+    padding: 0 16px;
+  }*/
+}
+
+
+
+
