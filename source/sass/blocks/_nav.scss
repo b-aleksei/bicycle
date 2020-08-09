@@ -23,7 +23,6 @@
 	display: flex;
 	width: 873px;
 	justify-content: space-between;
-	@include resetList();
 	padding: 0 23px 11px 17px;
 	margin: 26px auto 0 auto;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
