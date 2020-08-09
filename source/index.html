@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>bicycle</title>
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>bicycle</h1>
-<script src="js/main.js"></script>
+<div class="container">
+	<h1 class="visually-hidden">Мы продаем велосипеды</h1>
+	<header class="header">
+
+		<div class="header__adv">
+			<img class="header__logo" src="img/logo.svg" width="68" height="21" alt="Логотип компании">
+			<p class="header__title">Мы продаем велосипеды</p>
+			<p class="header__content">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+		</div>
+
+		<nav class="header__nav nav">
+			<button class="nav__toggle" type="button" aria-label="Отобразить меню"
+			        aria-expanded="false" aria-controls="main-menu">
+				<span class="nav__burger"></span>
+			</button>
+			<ul id="main-menu" class="nav__list">
+				<li class="nav__item">
+					<a class="nav__link" href="#">О нас</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__link nav__link--margin" href="#">Виды велосипедов</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__link" href="#">Видео про велосипеды</a>
+				</li>
+				<li class="nav__item">
+					<a class="nav__link" href="#">Контакты</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div>
+			<picture>
+				<!-- 1x-319px 2x-638px -->
+				<source type="image/webp" media="(max-width: 767px)"
+				        srcset="img/mobile/main-bg@1x.webp 1x, img/mobile/main-bg@2x.webp 2x">
+				<source media="(max-width: 767px)" srcset="img/mobile/main-bg@1x.jpg 1x, img/mobile/main-bg@2x.jpg 2x">
+				<!-- 1x-767px 2x-1534px -->
+				<source type="image/webp" media="(max-width: 1023px)"
+				        srcset="img/tablet/main-bg@1x.webp 1x, img/tablet/main-bg@2x.webp 2x">
+				<source media="(max-width: 1023px)" srcset="img/tablet/main-bg@1x.jpg 1x, img/tablet/main-bg@2x.jpg 2x">
+				<!-- 1x-1440px 2x-2880px -->
+				<source type="image/webp" srcset="img/desktop/main-bg@1x.webp 1x, img/desktop/main-bg@2x.webp 2x">
+				<img class="header__bg" src="img/desktop/main-bg@1x.jpg" srcset="img/desktop/main-bg@2x.jpg 2x" width="1440" height="825"
+				     alt="Изображение велосипеда">
+			</picture>
+		</div>
+	</header>
+	<main>
+		<section class="form">
+			<h2 class="visually-hidden">Оформить заявку</h2>
+			<form action="" method="post">
+				<p class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+				<label for="name"><span class="visually-hidden">Введите Ваше Имя</span>
+					<input id="name" type="text" placeholder="Введите Ваше Имя">
+				</label>
+				<label for="phone"><span class="visually-hidden">Введите Ваш номер телефона</span>
+					<input id="phone" type="text" placeholder="Введите Ваш номер телефона">
+				</label>
+				<button type="submit" aria-label="Отправить заявку на велосипед">Подобрать велосипед мечты</button>
+			</form>
+		</section>
+
+
+	</main>
+
+</div>
+<script src="js/main.min.js"></script>
 </body>
 </html>
