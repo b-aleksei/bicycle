@@ -10,13 +10,19 @@ html {
 }
 
 body {
-  font-family: "Fira Sans", "Arial", sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.6;
+  font-family: "#{$font-default}", "Arial", sans-serif;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
   min-width: 320px;
   margin: 0;
   //color: $black;
+}
+
+button {
+	display: block;
+	background-color: $color-aqua;
+	border: 0;
 }
 
 .body-lock {
@@ -39,22 +45,8 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 1920px;
+  max-width: $viewport--xl;
   margin: 0 auto;
-  padding: 0 40px;
-
-/*  @include viewport--lg {
-    padding: 0 32px;
-  }
-
-  @include viewport--md {
-    padding: 0 24px;
-  }
-
-  @include viewport--sm {
-    padding: 0 16px;
-  }*/
 }
 
 

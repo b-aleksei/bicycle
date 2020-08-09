@@ -1,0 +1,114 @@
+.nav {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+	width: 873px;
+	min-height: 62px;
+	padding: 0 23px 0 17px;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+	//border-bottom: 2px solid red;
+}
+
+.nav__list {
+	display: flex;
+	justify-content: space-between;
+	@include resetList();
+	margin-top: 26px;
+}
+
+.nav__link {
+	display: block;
+	text-decoration: none;
+	font-weight: 300;
+	//letter-spacing: 0;
+
+	color: $color-white-alfa;
+}
+
+.nav__burger {
+	display: none;
+	position: absolute;
+	top: 7px;
+	right: 0;
+	width: 30px;
+	height: 3px;
+	background-color: $color-default-black;
+	transition: $default-transition;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: -7px;
+		right: 0;
+		width: 30px;
+		height: 3px;
+		background-color: $color-default-black;
+		transition: $default-transition;
+	}
+
+	&::after {
+		top: 7px;
+	}
+}
+
+// Меняет бергер на крестик
+.nav--menu-active .nav__burger {
+	width: 0;
+}
+.nav--menu-active .nav__burger::before {
+	transform: translateY(7px) rotate(-45deg);
+}
+.nav--menu-active .nav__burger::after {
+	transform: translateY(-7px) rotate(45deg);
+}
+
+// открывает меню
+.nav--menu-active .nav__list {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 30px;
+	left: -30px;
+	width: 210px;
+	padding: 0 30px 20px 30px;
+	align-items: flex-start;
+
+	@media (min-width: $viewport--lg) {
+		position: static;
+		padding: 0;
+		flex-direction: row;
+		align-items: center;
+		width: unset;
+	}
+}
+
+.nav--menu-active .nav__item {
+	margin-top: 20px;
+	@media (min-width: $viewport--lg) {
+		margin-top: 0;
+	}
+}
+
+// поведение без js
+/*.no-js .nav {
+	@include viewport--md {
+		order: 2;
+		width: 100%;
+		margin: 30px auto 0 auto;
+	}
+}*/
+
+.nav__toggle {
+	display: none;
+}
+
+.no-js .nav__list {
+	position: static;
+	display: flex;
+	padding: 0;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+}

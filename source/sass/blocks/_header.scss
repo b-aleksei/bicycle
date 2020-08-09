@@ -1,4 +1,32 @@
-body {
-	background-color: gray;
-	margin: 0;
+.header {
+	//position: relative;
+}
+
+.header__bg {
+	width: 100%;
+	height: auto;
+}
+
+.header__adv {
+	position: absolute;
+	width: 350px;
+	top: 51.4%;
+	//top: 0%;
+	left: 50%;
+	transform: translate(-126%);
+	color: $color-default-white;
+
+	@include viewport(1190px) {
+		top: 36.4%
+	}
+}
+
+.adv__title {
+@include font(4.6, 600, 1.4);
+	margin: 24px 0 24px 0;
+}
+
+.adv__content {
+	@include font(2, 300, 1.6);
+	color: white;
 }

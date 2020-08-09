@@ -1,0 +1,47 @@
+.form {
+	position: absolute;
+	top: 49.9%;
+	//top: 0%;
+	right: 50%;
+	transform: translate(134%);
+	width: 328px;
+
+	@include viewport(1190px) {
+		top: 34.9%
+	}
+}
+
+.form__title {
+	color: $color-default-white;
+	font-size: 17px;
+	font-weight: 600;
+	letter-spacing: -0.025em;
+	text-align: center;
+	margin-bottom: 22px;
+}
+
+.form input,
+.form button[type="submit"] {
+	border: none;
+	width: 100%;
+	border-radius: 4px;
+}
+
+.form input {
+	height: 48px;
+	margin-bottom: 20px;
+	padding: 0 30px;
+
+	&::placeholder {
+		font-size: 15px;
+		color: $color-placeholder;
+		letter-spacing: 0.03em;
+	}
+}
+
+.form button[type="submit"] {
+	@include font(1.5, 600, 1.4);
+	color: $color-default-black;
+	letter-spacing: -0.02em;
+	height: 51px;
+}
