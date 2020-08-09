@@ -1,5 +1,12 @@
 .header {
-	//position: relative;
+	//padding: 0 30px;
+	@include viewport($viewport--lg) {
+	position: relative;
+	}
+}
+
+.header__wrap-nav {
+
 }
 
 .header__bg {
