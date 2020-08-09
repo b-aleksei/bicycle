@@ -22,8 +22,14 @@ body {
 
 button {
 	display: block;
-	background-color: $color-aqua;
+	background-color: $color-accent;
 	border: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
 }
 
 .body-lock {
