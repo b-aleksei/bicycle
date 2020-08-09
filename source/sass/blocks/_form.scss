@@ -1,14 +1,19 @@
 .form {
-	display: none;
 	position: absolute;
 	top: 49.9%;
-	//top: 0%;
 	right: 50%;
 	transform: translate(134%);
 	width: 328px;
 
 	@include viewport(1190px) {
 		top: 34.9%
+	}
+
+	@include viewport($viewport--lg) {
+		display: block;
+		position: static;
+		transform: translate(0);
+		margin: auto;
 	}
 }
 

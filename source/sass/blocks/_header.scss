@@ -1,14 +1,3 @@
-.header {
-	//padding: 0 30px;
-	@include viewport($viewport--lg) {
-	position: relative;
-	}
-}
-
-.header__wrap-nav {
-
-}
-
 .header__bg {
 	width: 100%;
 	height: auto;
@@ -18,7 +7,6 @@
 	position: absolute;
 	width: 350px;
 	top: 51.4%;
-	//top: 0%;
 	left: 50%;
 	transform: translate(-126%);
 	color: $color-default-white;
@@ -26,14 +14,58 @@
 	@include viewport(1190px) {
 		top: 36.4%
 	}
+
+	@include viewport($viewport--lg) {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: auto;
+		transform: translate(0);
+	}
 }
 
-.adv__title {
+.header__logo {
+	@include viewport($viewport--lg) {
+		margin: 25px 0 0 21px;
+	}
+
+	@include viewport($viewport--md) {
+		margin: 25px 0 0 18px;
+	}
+}
+
+.header__title {
 @include font(4.6, 600, 1.4);
 	margin: 24px 0 24px 0;
+
+	@include viewport($viewport--lg) {
+		width: 404px;
+		margin: 82px auto 20px auto;
+		font-size: 3rem;
+		line-height: 1.4;
+	}
+
+	@include viewport($viewport--md) {
+		text-align: center;
+		width: 288px;
+		margin: 68px auto 20px auto;
+	}
 }
 
-.adv__content {
+.header__content {
 	@include font(2, 300, 1.6);
-	color: white;
+	color: $color-default-white;
+
+	@include viewport($viewport--lg) {
+		width: 400px;
+		margin: auto;
+		font-size: 1.8rem;
+		line-height: 1.8;
+		text-align: center;
+	}
+
+	@include viewport($viewport--md) {
+		width: 288px;
+	}
 }

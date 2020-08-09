@@ -4,28 +4,44 @@
 	left: 50%;
 	transform: translate(-50%);
 	width: 100%;
-	max-width: 933px;
+	//max-width: 933px;
 	padding: 0 30px;
 
+	@include viewport($viewport--lg) {
+		//position: static;
+		//transform: translate(0);
+		//background-color: $color-default-black;
+	}
+
 	@include viewport($viewport--md) {
-		position: relative;
+		//position: relative;
 		background-color: $color-default-white;
 	}
 }
 
 .nav__list {
 	display: flex;
+	width: 873px;
 	justify-content: space-between;
 	@include resetList();
 	padding: 0 23px 11px 17px;
-	margin-top: 26px;
+	margin: 26px auto 0 auto;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 
-	@include viewport($viewport--md) {
-		width: 320px;
+	@include viewport($viewport--lg) {
+/*		width: 320px;
 		margin: 57px auto 50px auto;
 		padding: 0 16px;
 		flex-direction: column;
+		outline: 1px dashed tomato;*/
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
+		width: 320px;
+		margin: 0;
+		padding: 57px 16px 50px 16px;
+		background-color: $color-default-white;
 	}
 }
 
@@ -37,7 +53,7 @@
 	color: $color-white-alfa;
 	word-break: break-word;
 
-	@include viewport($viewport--md) {
+	@include viewport($viewport--lg) {
 		margin-top: 60px;
 		font-size: 2rem;
 		line-height: 1.4;
@@ -66,6 +82,8 @@
 }
 
 .nav__toggle {
+	top: 0;
+	right: 0;
 	position: relative;
 	display: none;
 	width: 50px;
@@ -102,10 +120,6 @@
 .js-enable {
 
 	@media (max-width: $viewport--lg) {
-		position: absolute;
-		display: flex;
-		justify-content: flex-end;
-		background-color: transparent;
 
 		& .nav__toggle {
 			display: block;
@@ -140,39 +154,7 @@
 		transform: translateY(-7px) rotate(45deg);
 	}
 
-	// показ меню
-	@media (max-width: $viewport--lg) {
-
-		& .nav__list {
-			position: absolute;
-			top: 0;
-			right: 0;
-			display: block;
-			width: 320px;
-			margin: 0;
-			padding: 57px 16px 50px 16px;
-			background-color: $color-default-white;
-		}
-
-		& .nav__link {
-			margin-top: 60px;
-			font-size: 2rem;
-			line-height: 1.4;
-			letter-spacing: 0.02em;
-			color: $color-font;
-			padding-right: 30px;
-
-			&::after {
-				content: '';
-				position: absolute;
-				top: 6px;
-				right: 10px;
-				width: 10px;
-				height: 10px;
-				border-right: 2px solid $color-arrow;
-				border-bottom: 2px solid $color-arrow;
-				transform: rotate(-45deg);
-			}
-		}
+	& .nav__list {
+		display: block;
 	}
 }
