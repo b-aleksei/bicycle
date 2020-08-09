@@ -4,7 +4,7 @@
   list-style: none;
 }
 
-@mixin font($fs, $fw, $lh, $ff: $font) {
+@mixin font($fs, $fw, $lh, $ff: $font-default) {
 	font-size: if($fs == _, $font-size, $fs * 1rem);
 	font-weight: if($fw == _, $font-weight, $fw);
 	line-height: if($lh == _, $line-height, $lh);
@@ -17,8 +17,9 @@
   }
 }
 
-@mixin viewport-to-lg {
-  @media (max-width: $viewport--lg - 1) {
+@mixin viewport($viewport) {
+
+  @media (max-width: if($viewport == $viewport--xl, $viewport, $viewport - 1)) {
     @content;
   }
 }

@@ -1,5 +1,5 @@
-$font: "Georgia";
-$font-size: 1.5rem;
+$font-default: "Open Sans";
+$font-size: 1.6rem;
 $line-height: 1.5;
 $font-weight: 400;
 
@@ -8,15 +8,18 @@ $viewport--sm:                      320px;
 $viewport--md:                      768px;
 $viewport--lg:                      1024px;
 $viewport--xl:                      1440px;
-$viewport--xxl:                     1920px;
 
 $color-default-black:             #000000;
 $color-default-white:             #ffffff;
 
-$color-black:                     #0e0e0e;
-$color-white:                     #f2f2f2;
-$color-blue:                      #2c39f2;
-$color-font:                      #5a5858;
+$color-placeholder:                rgba(28, 28, 28, 0.5);
+$color-arrow:                     rgba(44, 46, 63, 0.5);
+$color-close:                     rgba(20, 21, 23, 0.2);
+$color-white-alfa:                rgba(255, 255, 255, 0.7);
+$color-aqua:                      #0AD9C6;
+$color-font:                      #48494D;
 
 $retina-dppx: 1.5dppx;
 $retina-dpi: 144dpi;
+
+$default-transition: 0.3s
