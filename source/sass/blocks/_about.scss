@@ -1,0 +1,108 @@
+.about-us {
+	margin-top: 145px;
+	letter-spacing: -0.04em;
+
+	@include viewport($viewport--lg) {
+		margin-top: 72px;
+	}
+
+	@include viewport($viewport--md) {
+		margin-top: 70px;
+	}
+}
+
+.about-us__title {
+	@include font(3, 600, 1);
+	text-align: center;
+	margin-left: 17px;
+	margin-bottom: 48px;
+
+	@include viewport($viewport--lg) {
+		font-size: 2.4rem;
+		line-height: 1.7;
+		margin-left: 0;
+		margin-bottom: 29px;
+	}
+}
+
+.about-us__list {
+	display: flex;
+	width: 100%;
+	max-width: 1226px;
+	padding: 0 30px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: auto;
+
+	@include viewport($viewport--lg) {
+		max-width: 616px;
+	}
+
+	@include viewport($viewport--md) {
+		max-width: 320px;
+	}
+}
+
+.about-us__item {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	width: 263px;
+
+	&:not(:first-child) {
+		margin-left: 20px;
+	}
+
+	@include viewport($viewport--lg) {
+		&:nth-child(n + 3){
+			margin-top: 19px;
+		}
+
+		&:not(:first-child) {
+			margin-left: 0;
+		}
+	}
+
+	@include viewport($viewport--md) {
+		&:not(:first-child) {
+			margin-top: 32px
+		}
+		&:nth-child(3) {
+			margin-top: 57px
+		}
+		&:nth-child(4) {
+			margin-top: 60px
+		}
+	}
+}
+
+.about-us__count {
+	@include font(2.8, 600, 1.4);
+	color: $color-accent;
+}
+
+.about-us__content {
+	margin-top: 16px;
+	font-size: 2.2rem;
+	letter-spacing: -0.5px;
+	color: $color-default-black;
+
+	@include viewport($viewport--md) {
+		font-size: 1.8rem;
+		line-height: 1.87;
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+}
+
+.about-us__content--margin {
+	@include viewport($viewport--md) {
+		margin-top: 10px;
+	}
+}
+
+.about-us__content--margin2 {
+	@include viewport($viewport--md) {
+		margin-top: 6px;
+	}
+}
