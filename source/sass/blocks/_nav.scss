@@ -1,22 +1,8 @@
 .nav {
 	position: absolute;
 	top: 0;
-	left: 50%;
-	transform: translate(-50%);
 	width: 100%;
-	//max-width: 933px;
 	padding: 0 30px;
-
-	@include viewport($viewport--lg) {
-		//position: static;
-		//transform: translate(0);
-		//background-color: $color-default-black;
-	}
-
-	@include viewport($viewport--md) {
-		//position: relative;
-		background-color: $color-default-white;
-	}
 }
 
 .nav__list {
@@ -120,7 +106,7 @@
 
 	@media (max-width: $viewport--lg) {
 
-		& .nav__toggle {
+		 .nav__toggle {
 			display: block;
 			position: absolute;
 			top: 0;
@@ -128,7 +114,7 @@
 			z-index: 5;
 		}
 
-		& .nav__list {
+		 .nav__list {
 			display: none;
 		}
 	}
@@ -136,24 +122,24 @@
 
 .nav--menu-active {
 
-	& .nav__toggle {
+	 .nav__toggle {
 		background-color: transparent;
 	}
 	// Меняет бургер на крестик
-	& .nav__burger {
+	 .nav__burger {
 		width: 0;
 		background-color: $color-close;
 	}
 
-	& .nav__burger::before {
+	 .nav__burger::before {
 		transform: translateY(7px) rotate(-45deg);
 	}
 
-	& .nav__burger::after {
+	 .nav__burger::after {
 		transform: translateY(-7px) rotate(45deg);
 	}
 
-	& .nav__list {
+	 .nav__list {
 		display: block;
 	}
 }
