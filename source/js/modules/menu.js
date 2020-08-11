@@ -1,4 +1,3 @@
-/*
 
 	// main menu opener
 const navButton = document.querySelector('.nav__toggle');
@@ -22,4 +21,3 @@ window.onresize = function () {
 		isTablet = true
 	}
 }
-*/

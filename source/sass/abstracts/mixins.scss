@@ -1,0 +1,13 @@
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin viewport($viewport) {
+
+  @media (max-width: if($viewport == $viewport--xl, $viewport, $viewport - 1)) {
+    @content;
+  }
+}
+

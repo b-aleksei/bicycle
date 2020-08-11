@@ -5,11 +5,16 @@
 	@@include("source/html/base/head.html")
 </head>
 <body>
-
+<div class="intro">
+	<div class="intro__height"></div>
+	<div class="intro__wrap">
 @@include("source/html/base/header.html")
+@@include("source/html/components/offer.html")
+	</div>
+</div>
+
 <main>
 	<h1 class="visually-hidden">Мы продаем велосипеды</h1>
-@@include("source/html/components/offer.html")
 @@include("source/html/components/about.html")
 @@include("source/html/components/variety.html")
 </main>

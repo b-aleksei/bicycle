@@ -1,0 +1,26 @@
+.intro {
+	display: flex;
+	max-width: 1440px;
+	margin: auto;
+	background-color: $color-default-black;
+	background-image: url("../img/desktop/main-bg@1x.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@media (max-width: $viewport--lg) {
+		background: none;
+	}
+}
+
+.intro__height {
+	padding-bottom: 57.29%;  // соотношение высоты к ширине bg
+
+	@media (max-width: $viewport--lg) {
+		display: none;
+	}
+}
+
+.intro__wrap {
+	width: 100%;
+}
+

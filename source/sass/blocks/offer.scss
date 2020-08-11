@@ -1,98 +1,108 @@
 .offer {
-	position: relative;
-	max-width: 1440px;
-	margin: auto;
-
-
-	&::before {
-	  content: '';
-	  position: absolute;
-	  top: 0;
-		right: 0;
-		bottom: 0;
-	  left: 0;
-		background-image: url("../img/desktop/main-bg@1x.jpg");
-		background-repeat: no-repeat;
-		background-size: 100% auto;
-		z-index: -1;
-
-		@include viewport($viewport--lg) {
-			background-image: url("../img/tablet/main-bg@1x.jpg");
-		}
-		@include viewport($viewport--md) {
-			background-image: url("../img/mobile/main-bg@1x.jpg");
-		}
-	}
-}
-
-.offer__wrap {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	max-width: 878px;
 	margin: 0 auto;
-	padding-top: 22%;
-	padding-bottom: 15.6%;
-	outline: 1px dashed tomato;
+	padding-top: 17.8%;
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 		flex-direction: column;
 		align-items: center;
 		padding-top: 0;
-		padding-bottom: 0;
 		max-width: 100%;
 	}
 }
 
+.offer__height {
+	display: none;
+
+	@media (max-width: $viewport--lg) {
+		display: block;
+	padding-bottom: 44.33%;  // соотношение высоты к ширине bg
+	}
+
+	@media (max-width: $viewport--md) {
+		display: block;
+		padding-bottom: 122%;  // соотношение высоты к ширине bg
+	}
+}
+
 .offer__adv {
+	position: relative;
 	width: 350px;
 	color: $color-default-white;
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
+		display: flex;
 		width: 100%;
+		background-color: $color-default-black;
+		background-image: url("../img/tablet/main-bg@1x.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	@media (max-width: $viewport--md) {
+		background-image: url("../img/mobile/main-bg@1x.jpg");
+	}
+}
+
+.offer__info {
+	@media (max-width: $viewport--lg) {
+		justify-self: center;
+		margin: 0 auto;
 	}
 }
 
 .offer__logo {
-	@include viewport($viewport--lg) {
-		margin: 25px 0 0 21px;
+	@media (max-width: $viewport--lg) {
+		position: absolute;
+		top: 25px;
+		left: 21px;
 	}
 
-	@include viewport($viewport--md) {
-		margin: 25px 0 0 18px;
+	@media (max-width: $viewport--md) {
+		left: 18px;
 	}
 }
 
 .offer__title {
-	@include font(4.6, 600, 1.4);
+	font-size: 46px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: -0.004em;
 	margin: 24px 0 24px 0;
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 		width: 404px;
-		margin: 10.7% auto 20px auto;
-		font-size: 3rem;
+		margin: 134px auto 20px 6px;
+		font-size: 30px;
 		line-height: 1.4;
 	}
 
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		text-align: center;
 		width: 288px;
-		margin: 68px auto 20px auto;
+		margin: 119px auto 20px auto;
 	}
 }
 
 .offer__content {
-	@include font(2, 300, 1.6);
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.6;
+	letter-spacing: -0.005em;
 	color: $color-default-white;
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 		width: 400px;
 		margin: auto;
-		font-size: 1.8rem;
+		font-size: 18px;
 		line-height: 1.8;
 		text-align: center;
 	}
 
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		width: 288px;
 	}
 }

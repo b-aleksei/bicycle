@@ -13,7 +13,7 @@
 	margin: 26px auto 0 auto;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 /*		width: 320px;
 		margin: 57px auto 50px auto;
 		padding: 0 16px;
@@ -38,7 +38,7 @@
 	color: $color-white-alfa;
 	word-break: break-word;
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 		margin-top: 60px;
 		font-size: 2rem;
 		line-height: 1.4;
@@ -61,7 +61,7 @@
 }
 
 .nav__link--margin {
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		margin-top: 63px;
 	}
 }
