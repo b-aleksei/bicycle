@@ -1,0 +1,23 @@
+.contact {
+	display: flex;
+	max-width: 558px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: auto;
+	padding: 0;
+	list-style: none;
+}
+
+.contact__link {
+	position: relative;
+	display: block;
+	text-decoration: none;
+	color: $color-link-footer;
+	padding-left: 40px;
+}
+
+.contact__icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+}

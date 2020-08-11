@@ -9,7 +9,7 @@
 		top: 34.9%
 	}
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 		display: block;
 		position: static;
 		transform: translate(0);
@@ -17,7 +17,7 @@
 		width: 323px;
 	}
 
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		width: 320px;
 		padding: 0 16px;
 	}
@@ -31,13 +31,13 @@
 	text-align: center;
 	margin-bottom: 22px;
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 		font-size: 1.8rem;
 		color: $color-default-black;
 		margin-bottom: 31px;
 	}
 
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		margin-bottom: 23px;
 	}
 }
@@ -48,7 +48,7 @@
 	width: 100%;
 	border-radius: 4px;
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 		border-radius: 6px;
 	}
 }
@@ -64,18 +64,20 @@
 		letter-spacing: 0.03em;
 	}
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 		border: 1px solid $color-bd-input;
 		padding-left: 21px;
 	}
 
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		padding-left: 25px;
 	}
 }
 
 .form button[type="submit"] {
-	@include font(1.5, 600, 1.4);
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 1.4;
 	color: $color-default-black;
 	letter-spacing: -0.02em;
 	height: 51px;

@@ -1,24 +1,23 @@
 .about-us {
-	margin-top: 145px;
+	max-width: 1440px;
+	margin: 150px auto 0 auto;
 	letter-spacing: -0.04em;
 
-	@include viewport($viewport--lg) {
-		margin-top: 72px;
-	}
-
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--lg) {
 		margin-top: 70px;
 	}
 }
 
 .about-us__title {
-	@include font(3, 600, 1);
+	font-size: 30px;
+	font-weight: 600;
+	line-height: 1;
 	text-align: center;
 	margin-left: 17px;
 	margin-bottom: 48px;
 
-	@include viewport($viewport--lg) {
-		font-size: 2.4rem;
+	@media (max-width: $viewport--lg) {
+		font-size: 24px;
 		line-height: 1.7;
 		margin-left: 0;
 		margin-bottom: 29px;
@@ -34,11 +33,11 @@
 	justify-content: space-between;
 	margin: auto;
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 		max-width: 616px;
 	}
 
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		max-width: 320px;
 	}
 }
@@ -53,7 +52,7 @@
 		margin-left: 20px;
 	}
 
-	@include viewport($viewport--lg) {
+	@media (max-width: $viewport--lg) {
 		&:nth-child(n + 3){
 			margin-top: 19px;
 		}
@@ -63,7 +62,7 @@
 		}
 	}
 
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		&:not(:first-child) {
 			margin-top: 32px
 		}
@@ -77,18 +76,20 @@
 }
 
 .about-us__count {
-	@include font(2.8, 600, 1.4);
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.4;
 	color: $color-accent;
 }
 
 .about-us__content {
 	margin-top: 16px;
-	font-size: 2.2rem;
+	font-size: 22px;
 	letter-spacing: -0.5px;
 	color: $color-default-black;
 
-	@include viewport($viewport--md) {
-		font-size: 1.8rem;
+	@media (max-width: $viewport--md) {
+		font-size: 18px;
 		line-height: 1.87;
 		margin-top: 15px;
 		margin-bottom: 0;
@@ -96,13 +97,13 @@
 }
 
 .about-us__content--margin {
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		margin-top: 10px;
 	}
 }
 
 .about-us__content--margin2 {
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		margin-top: 6px;
 	}
 }

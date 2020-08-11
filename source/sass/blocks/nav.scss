@@ -1,46 +1,36 @@
 .nav {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%);
-	width: 100%;
-	//max-width: 933px;
-	padding: 0 30px;
-
-	@include viewport($viewport--lg) {
-		//position: static;
-		//transform: translate(0);
-		//background-color: $color-default-black;
-	}
-
-	@include viewport($viewport--md) {
-		//position: relative;
-		background-color: $color-default-white;
+	position: relative;
+	padding: 25px 30px 0 30px;
+	@media (max-width: $viewport--lg) {
+		padding: 0;
 	}
 }
 
 .nav__list {
 	display: flex;
+	flex-wrap: wrap;
 	width: 873px;
-	justify-content: space-between;
 	padding: 0 23px 11px 17px;
-	margin: 26px auto 0 auto;
+	margin: 0 auto;
+	justify-content: space-between;
+	list-style: none;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 
-	@include viewport($viewport--lg) {
-/*		width: 320px;
-		margin: 57px auto 50px auto;
-		padding: 0 16px;
-		flex-direction: column;
-		outline: 1px dashed tomato;*/
+	@media (max-width: $viewport--lg) {
 		position: absolute;
 		top: 0;
 		right: 0;
-		display: block;
 		width: 320px;
 		margin: 0;
 		padding: 57px 16px 50px 16px;
 		background-color: $color-default-white;
+		z-index: 4;
+	}
+
+	@media (max-width: $viewport--md) {
+		position: static;
+		margin: auto;
+		width: 320px;
 	}
 }
 
@@ -51,10 +41,15 @@
 	font-weight: 300;
 	color: $color-white-alfa;
 	word-break: break-word;
+	transition: color $default-transition;
 
-	@include viewport($viewport--lg) {
+	&:hover {
+		color: $color-accent;
+	}
+
+	@media (max-width: $viewport--lg) {
 		margin-top: 60px;
-		font-size: 2rem;
+		font-size: 20px;
 		line-height: 1.4;
 		letter-spacing: 0.02em;
 		color: $color-font;
@@ -75,18 +70,20 @@
 }
 
 .nav__link--margin {
-	@include viewport($viewport--md) {
+	@media (max-width: $viewport--md) {
 		margin-top: 63px;
 	}
 }
 
 .nav__toggle {
+	display: none;
+	position: absolute;
 	top: 0;
 	right: 0;
-	position: relative;
-	display: none;
 	width: 50px;
 	height: 50px;
+	background-color: $color-accent;
+	border: 0;
 }
 
 .nav__burger {
@@ -120,7 +117,7 @@
 
 	@media (max-width: $viewport--lg) {
 
-		& .nav__toggle {
+		 .nav__toggle {
 			display: block;
 			position: absolute;
 			top: 0;
@@ -128,7 +125,7 @@
 			z-index: 5;
 		}
 
-		& .nav__list {
+		 .nav__list {
 			display: none;
 		}
 	}
@@ -136,24 +133,28 @@
 
 .nav--menu-active {
 
-	& .nav__toggle {
+	 .nav__toggle {
 		background-color: transparent;
 	}
 	// Меняет бургер на крестик
-	& .nav__burger {
+	 .nav__burger {
 		width: 0;
 		background-color: $color-close;
 	}
 
-	& .nav__burger::before {
+	 .nav__burger::before {
 		transform: translateY(7px) rotate(-45deg);
 	}
 
-	& .nav__burger::after {
+	 .nav__burger::after {
 		transform: translateY(-7px) rotate(45deg);
 	}
 
-	& .nav__list {
+	 .nav__list {
 		display: block;
+
+		 @media (max-width: $viewport--md) {
+				 position: absolute;
+		 }
 	}
 }

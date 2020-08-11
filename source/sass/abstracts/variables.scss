@@ -1,18 +1,14 @@
-$font-default: "Open Sans";
-$font-size: 1.6rem;
-$line-height: 1.5;
-$font-weight: 400;
-
 
 $viewport--sm:                      320px;
-$viewport--md:                      768px;
-$viewport--lg:                      1024px;
+$viewport--md:                      767px;
+$viewport--lg:                      1023px;
 $viewport--xl:                      1440px;
 
 $color-default-black:             #000000;
 $color-default-white:             #ffffff;
 
 $color-placeholder:               rgba(28, 28, 28, 0.5);
+$color-link-footer:               rgba(0, 0, 0, 0.5);
 $color-arrow:                     rgba(44, 46, 63, 0.5);
 $color-close:                     rgba(20, 21, 23, 0.2);
 $color-white-alfa:                rgba(255, 255, 255, 0.7);
