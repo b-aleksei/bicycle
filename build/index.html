@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>bicycle</title>
-	<link rel="stylesheet" href="css/style.min.css">
+	<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="bicycle">
+
+<!-- генерируйте favicon тут - https://realfavicongenerator.net/ -->
+
+<!-- <link href="favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+<link href="favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="favicon/site.webmanifest" rel="manifest">
+<link color="#c84659" href="favicon/safari-pinned-tab.svg" rel="mask-icon">
+<link href="favicon/favicon.ico" rel="shortcut icon">
+<meta content="#ffffff" name="msapplication-TileColor">
+<meta content="favicon/browserconfig.xml" name="msapplication-config">
+<meta content="#ffffff" name="theme-color">
+ -->
+
+<!-- используйте только для шрифта находящегося на первом экране -->
+
+<!-- <link rel="preload" href="fonts/placeholder.woff2" as="font" crossorigin="anonymous"> -->
+
+<link rel="stylesheet" href="css/style.min.css">
+
 </head>
 <body>
-<div class="container">
+
+<header class="header ">
+	<nav class="header__nav nav">
+		<button class="nav__toggle" type="button" aria-label="Отобразить меню"
+		        aria-expanded="false" aria-controls="main-menu">
+			<span class="nav__burger"></span>
+		</button>
+		<ul id="main-menu" class="nav__list">
+			<li class="nav__item">
+				<a class="nav__link" href="#">О нас</a>
+			</li>
+			<li class="nav__item">
+				<a class="nav__link nav__link--margin" href="#">Виды велосипедов</a>
+			</li>
+			<li class="nav__item">
+				<a class="nav__link" href="#">Видео про велосипеды</a>
+			</li>
+			<li class="nav__item">
+				<a class="nav__link" href="#">Контакты</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<main>
 	<h1 class="visually-hidden">Мы продаем велосипеды</h1>
-	<header class="header">
+<div class="offer">
 
-		<div class="header__adv">
-			<img class="header__logo" src="img/logo.svg" width="68" height="21" alt="Логотип компании">
-			<p class="header__title">Мы продаем велосипеды</p>
-			<p class="header__content">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+	<div class="offer__wrap">
+		<div class="offer__adv">
+			<img class="offer__logo" src="img/logo.svg" width="68" height="21" alt="Логотип компании">
+			<p class="offer__title">Мы продаем велосипеды</p>
+			<p class="offer__content">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
 		</div>
 
-		<nav class="header__nav nav">
-			<button class="nav__toggle" type="button" aria-label="Отобразить меню" aria-expanded="false" aria-controls="main-menu">
-				<span class="nav__burger"></span>
-			</button>
-			<ul id="main-menu" class="nav__list">
-				<li class="nav__item">
-					<a class="nav__link" href="#">О нас</a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link nav__link--margin" href="#">Виды велосипедов</a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link" href="#">Видео про велосипеды</a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link" href="#">Контакты</a>
-				</li>
-			</ul>
-		</nav>
-
-		<div>
-			<picture>
-				<!-- 1x-319px 2x-638px -->
-				<source type="image/webp" media="(max-width: 767px)" srcset="img/mobile/main-bg@1x.webp 1x, img/mobile/main-bg@2x.webp 2x">
-				<source media="(max-width: 767px)" srcset="img/mobile/main-bg@1x.jpg 1x, img/mobile/main-bg@2x.jpg 2x">
-				<!-- 1x-767px 2x-1534px -->
-				<source type="image/webp" media="(max-width: 1023px)" srcset="img/tablet/main-bg@1x.webp 1x, img/tablet/main-bg@2x.webp 2x">
-				<source media="(max-width: 1023px)" srcset="img/tablet/main-bg@1x.jpg 1x, img/tablet/main-bg@2x.jpg 2x">
-				<!-- 1x-1440px 2x-2880px -->
-				<source type="image/webp" srcset="img/desktop/main-bg@1x.webp 1x, img/desktop/main-bg@2x.webp 2x">
-				<img class="header__bg" src="img/desktop/main-bg@1x.jpg" srcset="img/desktop/main-bg@2x.jpg 2x" width="1440" height="825" alt="Изображение велосипеда">
-			</picture>
-		</div>
-	</header>
-	<main>
 		<section class="form">
 			<h2 class="visually-hidden">Оформить заявку</h2>
 			<form action="" method="post">
@@ -66,80 +76,81 @@
 				<button type="submit" aria-label="Отправить заявку на велосипед">Подобрать велосипед мечты</button>
 			</form>
 		</section>
-
-		<section class="about-us">
-			<h2 class="about-us__title">Несколько фактов о нас</h2>
-			<ul class="about-us__list">
-				<li class="about-us__item">
-					<span class="about-us__count">01</span>
-					<p class="about-us__content">Самый широкий выбор велосипедов!</p>
-				</li>
-				<li class="about-us__item">
-					<span class="about-us__count">02</span>
-					<p class="about-us__content about-us__content--margin">Доставка велосипедов по всей России!</p>
-				</li>
-				<li class="about-us__item">
-					<span class="about-us__count">03</span>
-					<p class="about-us__content about-us__content--margin2">Большой выбор крутых аксессуаров!</p>
-				</li>
-				<li class="about-us__item">
-					<span class="about-us__count">04</span>
-					<p class="about-us__content about-us__content--margin2">Профессиональные консультации!</p>
-				</li>
-			</ul>
-		</section>
-
-		<section class="variety">
-		    <h2 class="variety__title">Виды велосипедов</h2>
-			<ul>
-				<li>
-					<a href="#">
-						<figure>
-							<img src="img/desktop/bike1@1x.jpg" width="342" height="503" alt="Дорожный велосипед">
-							<figcaption>
-								Дорожный велосипед
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<figure>
-							<img src="img/desktop/bike2@1x.jpg" width="342" height="566" alt="Горный велосипед">
-							<figcaption>
-								Горный велосипед
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<figure>
-							<img src="img/desktop/bike3@1x.jpg" width="342" height="513" alt="Детский велосипед">
-							<figcaption>
-								Детский велосипед
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-			</ul>
-		</section>
-
-	</main>
-
-	<footer>
-		<ul class="contact">
-			<li>
-				<a class="contact__link contact__link--mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-			</li>
-			<li>
-				<a class="contact__link contact__link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
-			</li>
-		</ul>
-	</footer>
+	</div>
 </div>
 
+<section class="about-us">
+	<h2 class="about-us__title">Несколько фактов о нас</h2>
+	<ul class="about-us__list">
+		<li class="about-us__item">
+			<span class="about-us__count">01</span>
+			<p class="about-us__content">Самый широкий выбор велосипедов!</p>
+		</li>
+		<li class="about-us__item">
+			<span class="about-us__count">02</span>
+			<p class="about-us__content about-us__content--margin">Доставка велосипедов по всей России!</p>
+		</li>
+		<li class="about-us__item">
+			<span class="about-us__count">03</span>
+			<p class="about-us__content about-us__content--margin2">Большой выбор крутых аксессуаров!</p>
+		</li>
+		<li class="about-us__item">
+			<span class="about-us__count">04</span>
+			<p class="about-us__content about-us__content--margin2">Профессиональные консультации!</p>
+		</li>
+	</ul>
+</section>
+
+<section class="variety">
+	<h2 class="variety__title">Виды велосипедов</h2>
+	<ul>
+		<li>
+			<a href="#">
+				<figure>
+					<img src="img/desktop/bike1@1x.jpg" width="342" height="503" alt="Дорожный велосипед">
+					<figcaption>
+						Дорожный велосипед
+					</figcaption>
+				</figure>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<figure>
+					<img src="img/desktop/bike2@1x.jpg" width="342" height="566" alt="Горный велосипед">
+					<figcaption>
+						Горный велосипед
+					</figcaption>
+				</figure>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<figure>
+					<img src="img/desktop/bike3@1x.jpg" width="342" height="513" alt="Детский велосипед">
+					<figcaption>
+						Детский велосипед
+					</figcaption>
+				</figure>
+			</a>
+		</li>
+	</ul>
+</section>
+
+</main>
+<footer>
+	<ul class="contact">
+		<li>
+			<a class="contact__link contact__link--mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+		</li>
+		<li>
+			<a class="contact__link contact__link--phone" href="tel:+749978468446">+7 (499) -784-684-46</a>
+		</li>
+	</ul>
+</footer>
+
+
+<script src="js/vendor.min.js"></script>
 <script src="js/main.min.js"></script>
-<script src="js/picturefill.min.js"></script>
 </body>
 </html>

@@ -4,11 +4,9 @@
 package-lock.json
 *.ai
 *.log
-*.pdf
 *.psd
 *.sublime*
 node_modules/
-для-верстки/
 npm-debug.*
 source/css/*.css
 source/css/*.map

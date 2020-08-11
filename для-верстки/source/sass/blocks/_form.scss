@@ -1,29 +1,35 @@
 .form {
+	position: absolute;
+	top: 49.9%;
+	right: 50%;
+	transform: translate(134%);
 	width: 328px;
-	@include viewport(1190px) {
 
+	@include viewport(1190px) {
+		top: 34.9%
 	}
 
 	@include viewport($viewport--lg) {
-		margin: 18.5% auto 0 auto;
+		display: block;
+		position: static;
+		transform: translate(0);
+		margin: 64px auto 0 auto;
 		width: 323px;
 	}
 
 	@include viewport($viewport--md) {
-		margin-top: 41%;
 		width: 320px;
 		padding: 0 16px;
 	}
 }
 
 .form__title {
-	margin-bottom: 22px;
-	margin-top: 8px;
 	color: $color-default-white;
 	font-size: 1.7rem;
 	font-weight: 600;
 	letter-spacing: -0.025em;
 	text-align: center;
+	margin-bottom: 22px;
 
 	@include viewport($viewport--lg) {
 		font-size: 1.8rem;
