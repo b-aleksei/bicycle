@@ -1,1 +1,1 @@
-import './utils/picturefill.min'
+import './vendor/picturefill.min';
