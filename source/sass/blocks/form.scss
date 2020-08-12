@@ -22,7 +22,6 @@
 
 .form input {
   height: 48px;
-  //margin-bottom: 20px;
   padding: 0 30px;
 
   &::placeholder {
@@ -64,11 +63,11 @@
 
 .form__error {
   position: absolute;
-  bottom: -13px;
+  bottom: -15px;
   left: 0;
   width: 100%;
-  color: red;
-  font-size: 10px;
+  color: $color-error;
+  font-size: 11px;
   opacity: 0;
   transition: opacity $default-transition;
 }
