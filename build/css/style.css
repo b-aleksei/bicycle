@@ -38,7 +38,6 @@ body {
   margin: 0; }
 
 .body-lock {
-  overflow-y: scroll;
   position: fixed; }
 
 .visually-hidden {
@@ -319,7 +318,6 @@ body {
 
 .form input {
   height: 48px;
-  margin-bottom: 20px;
   padding: 0 30px; }
   .form input::-webkit-input-placeholder {
     font-size: 15px;
@@ -341,6 +339,50 @@ body {
     font-size: 15px;
     color: rgba(28, 28, 28, 0.5);
     letter-spacing: 0.03em; }
+
+.form__input-wrap {
+  position: relative;
+  margin-bottom: 20px; }
+
+.form__input-valid {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 5px;
+  overflow: hidden;
+  width: 20px;
+  height: 18px; }
+  .form__input-valid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s; }
+
+.form__valid .form__input-valid::after {
+  -webkit-transform: translate(100%);
+          transform: translate(100%); }
+
+.form__error {
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  width: 100%;
+  color: red;
+  font-size: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+
+.form__invalid .form__error {
+  opacity: 1; }
 
 .form button[type="submit"] {
   display: block;
@@ -519,3 +561,56 @@ body {
 
 .intro__wrap {
   width: 100%; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5); }
+
+.modal--invisible {
+  display: none; }
+
+.modal__wrap {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  padding: 80px 47px;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  width: 480px;
+  height: 450px;
+  text-align: center;
+  -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  background-color: #ffffff; }
+
+.modal__title {
+  margin-bottom: 18px;
+  letter-spacing: -0.05rem; }
+
+.modal__content {
+  padding: 0 30px;
+  margin-bottom: 33px; }
+
+.modal__close {
+  width: 100px;
+  height: 60px;
+  padding: 0;
+  font-size: 16px;
+  background-color: #0AD9C6;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer; }
+
+@media (max-width: 767px) {
+  .modal__wrap {
+    padding: 50px 0 0 0;
+    width: 320px;
+    text-align: center; }
+  .modal__title {
+    margin-top: 30px;
+    margin-bottom: 25px; } }

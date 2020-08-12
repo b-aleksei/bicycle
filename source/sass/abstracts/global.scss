@@ -18,8 +18,7 @@ body {
 }
 
 .body-lock {
-  overflow-y: scroll;
-  position:fixed;
+  position: fixed;
 }
 
 .visually-hidden {
@@ -39,7 +38,3 @@ body {
   max-width: $viewport--xl;
   margin: 0 auto;
 }
-
-
-
-
