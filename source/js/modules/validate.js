@@ -16,7 +16,7 @@ const successSend = {
 const signSuccess = `
 <span class="form__input-valid">
   <svg width="20" height="18">
-    <use href="img/sprite_auto.svg#tick"></use>
+    <use href="#tick"></use>
   </svg>
 </span>`;
 
