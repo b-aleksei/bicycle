@@ -1,0 +1,149 @@
+.video {
+  position: relative;
+  margin-top: 100px;
+  padding-left: calc(100% * 0.172);
+  padding-right: calc(100% * 0.172);
+
+  @media (max-width: $viewport--lg) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: $viewport--md) {
+    margin-top: 12px;
+    padding-left: calc(100% * 0.05);
+    padding-right: calc(100% * 0.05);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 12%;
+    background-color: $color-default-black;
+    z-index: -1;
+
+    @media (max-width: $viewport--lg) {
+      bottom: 17%;
+    }
+
+    @media (max-width: $viewport--md) {
+      bottom: 11%;
+    }
+  }
+}
+.video__wrap {
+  max-width: 930px;
+  min-width: 503px;
+  margin: auto;
+  padding-top: 88px;
+  padding-left: 1px;
+
+  @media (max-width: $viewport--lg) {
+    padding-top: 46px;
+  }
+
+  @media (max-width: $viewport--md) {
+    min-width: 288px;
+    max-width: 503px;
+    padding-top: 61px;
+    padding-left: 0;
+  }
+}
+
+.video__description {
+  width: 355px;
+  padding-right: 5px;
+  margin: 0 auto 57px auto;
+
+  @media (max-width: $viewport--lg) {
+    width: 419px;
+    padding-right: 0;
+    margin-bottom: 41px;
+  }
+
+  @media (max-width: $viewport--lg) {
+    width: auto;
+    margin-bottom: 55px;
+  }
+}
+
+.video__title {
+  margin-bottom: 13px;
+  font-weight: 600;
+  font-size: 30px;
+  color: $color-default-white;
+  letter-spacing: -0.03em;
+
+  @media (max-width: $viewport--lg) {
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  @media (max-width: $viewport--md) {
+    padding-right: 10px;
+  }
+}
+
+.video__text {
+  margin-top: 0;
+  margin-left: 18px;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: -0.005em;
+  color: $color-white-alfa;
+
+  @media (max-width: $viewport--lg) {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.video__content {
+  position: relative;
+  padding-bottom: 56.19%;
+  background-image: url('../img/desktop/bike-middle@1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $viewport--md) {
+    padding-bottom: 56.06%;
+    background-image: url('../img/tablet/bike-middle@1x.jpg');
+  }
+}
+
+.video__btn {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%,50%);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 0;
+  background-color: $color-accent;
+  cursor: pointer;
+
+  @media (max-width: $viewport--lg) and (min-width: $viewport--md + 1){
+    width: 90px;
+    height: 90px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(54%,50%);
+    border-style: solid;
+    border-color: transparent transparent transparent $color-default-black;
+    border-width: 9px 0 9px 13px ;
+
+    @media (max-width: $viewport--lg) and (min-width: $viewport--md + 1) {
+      border-width: 12px 0 12px 18px ;
+      transform: translate(64%,50%);
+    }
+  }
+}
