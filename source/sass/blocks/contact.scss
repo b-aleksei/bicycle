@@ -20,7 +20,7 @@
   padding: 0 9px 0 0;
 
   @media (max-width: $viewport--lg) {
-     width: auto;
+    width: auto;
     padding: 0;
     margin-bottom: 22px;
   }
@@ -64,23 +64,22 @@
 
 .contact__map-wrap {
   height: 530px;
-  background-image: url('../img/desktop/map-plug.jpg');
+  background-image: url("../img/desktop/map-plug.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
   @media (max-width: $viewport--lg) {
-    background-image: url('../img/tablet/map-plug.jpg');
+    background-image: url("../img/tablet/map-plug.jpg");
     height: 545px;
   }
 
   @media (max-width: $viewport--md) {
-    background-image: url('../img/mobile/map-plug.jpg');
+    background-image: url("../img/mobile/map-plug.jpg");
     height: 250px;
   }
 }
 
 .contact__map {
-  //display: none;
   width: 100%;
   height: 100%;
 }

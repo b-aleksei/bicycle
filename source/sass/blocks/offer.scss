@@ -40,10 +40,18 @@
     background-image: url("../img/tablet/main-bg@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include retina {
+      background-image: url("../img/tablet/main-bg@2x.jpg");
+    }
   }
 
   @media (max-width: $viewport--md) {
     background-image: url("../img/mobile/main-bg@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/mobile/main-bg@2x.jpg");
+    }
   }
 }
 

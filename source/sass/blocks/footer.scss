@@ -47,6 +47,15 @@
   color: $color-link-footer;
   padding-left: 40px;
   word-break: break-word;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1;
+    color: $color-default-black;
+  }
 }
 
 .footer__icon {

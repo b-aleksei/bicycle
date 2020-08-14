@@ -11,7 +11,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 873px;
-  padding: 0 23px 11px 17px;
+  padding: 0 23px 0 17px;
   margin: 0 auto;
   justify-content: space-between;
   list-style: none;
@@ -35,6 +35,10 @@
   }
 }
 
+.nav__item {
+  margin-bottom: 11px;
+}
+
 .nav__link {
   display: block;
   position: relative;
@@ -42,10 +46,15 @@
   font-weight: 300;
   color: $color-white-alfa;
   word-break: break-word;
-  transition: color $default-transition;
+  transition: $default-transition;
 
   &:hover {
+    opacity: 0.5;
     color: $color-accent;
+  }
+
+  &:active {
+    opacity: 1;
   }
 
   @media (max-width: $viewport--lg) {
