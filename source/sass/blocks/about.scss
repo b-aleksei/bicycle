@@ -27,7 +27,7 @@
 .about-us__list {
   display: flex;
   width: 100%;
-  max-width: 1248px;
+  max-width: 1265px;
   padding: 0 30px;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -39,6 +39,7 @@
 
   @media (max-width: $viewport--md) {
     max-width: 320px;
+    padding: 0 16px;
   }
 }
 
@@ -48,31 +49,24 @@
   flex-direction: column;
   width: 263px;
 
-  &:not(:first-child) {
-    margin-left: 20px;
-  }
-
   @media (max-width: $viewport--lg) {
     &:nth-child(n + 3) {
       margin-top: 19px;
     }
-
-    &:not(:first-child) {
-      margin-left: 0;
-    }
   }
 
   @media (max-width: $viewport--md) {
+
     &:not(:first-child) {
       margin-top: 32px;
     }
 
-    &:nth-child(3) {
-      margin-top: 57px;
+    .about-us__count--three {
+      margin-top: 26px;
     }
 
-    &:nth-child(4) {
-      margin-top: 60px;
+    .about-us__count--four {
+      margin-top: 29px;
     }
   }
 }
