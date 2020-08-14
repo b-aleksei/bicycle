@@ -1,3 +1,4 @@
+$font-default:                    "Open Sans", "Arial", sans-serif;
 
 $viewport--sm:                      320px;
 $viewport--md:                      767px;
@@ -19,6 +20,7 @@ $color-title:                     #1f1f1f;
 $color-bd-input:                  #c9ccd4;
 $color-overlay:                   rgba(255, 255, 255, 0.5);
 $color-error:                     red;
+$color-btn-hover:                 rgba($color-accent, 0.7);
 
 $retina-dppx: 1.5dppx;
 $retina-dpi: 144dpi;

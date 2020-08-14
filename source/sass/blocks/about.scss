@@ -27,14 +27,14 @@
 .about-us__list {
   display: flex;
   width: 100%;
-  max-width: 1226px;
+  max-width: 1248px;
   padding: 0 30px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: auto;
 
   @media (max-width: $viewport--lg) {
-    max-width: 616px;
+    max-width: 638px;
   }
 
   @media (max-width: $viewport--md) {

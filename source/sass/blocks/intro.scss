@@ -10,6 +10,10 @@
   @media (max-width: $viewport--lg) {
     background: none;
   }
+
+  @include retina {
+    background-image: url("../img/desktop/main-bg@2x.jpg");
+  }
 }
 
 .intro__height {

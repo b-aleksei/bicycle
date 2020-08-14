@@ -14,7 +14,8 @@ if (Promise) { // проверка на ie
     <use href="#tick"></use>
   </svg>
 </span>`;
-  let messageError = {
+
+  const messageError = {
     maxLength: 'Длина номера превышает 11 цифр',
     minLength: 'Длина номера менее 11 цифр',
     errorSign: 'Вы ввели недопустимый символ',
@@ -24,11 +25,13 @@ if (Promise) { // проверка на ie
     const input = e.currentTarget;
     const regExp = input.name === 'name' ? regExpName : regExpPhone;
     const invalid = regExp.test(input.value);
-    invalid ? input.setCustomValidity(messageError.errorSign) : input.setCustomValidity('');
+    input.setCustomValidity('');
+    if (invalid) {
+      input.setCustomValidity(messageError.errorSign);
+    }
 
     if (input.name === 'phone' && !invalid) {
       let arr = input.value.match(/\d+/g);
-      console.log(arr);
       if (arr) {
         let phoneLength = arr.join('').length;
         if (phoneLength < 11) {
