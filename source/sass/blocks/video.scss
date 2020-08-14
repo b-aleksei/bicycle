@@ -15,7 +15,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -33,6 +33,7 @@
     }
   }
 }
+
 .video__wrap {
   max-width: 930px;
   min-width: 503px;
@@ -104,13 +105,21 @@
 .video__content {
   position: relative;
   padding-bottom: 56.19%;
-  background-image: url('../img/desktop/bike-middle@1x.jpg');
+  background-image: url("../img/desktop/bike-middle@1x.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include retina {
+    background-image: url("../img/desktop/bike-middle@2x.jpg");
+  }
+
   @media (max-width: $viewport--md) {
     padding-bottom: 56.06%;
-    background-image: url('../img/tablet/bike-middle@1x.jpg');
+    background-image: url("../img/tablet/bike-middle@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/tablet/bike-middle@2x.jpg");
+    }
   }
 }
 
@@ -118,32 +127,41 @@
   position: absolute;
   bottom: 50%;
   right: 50%;
-  transform: translate(50%,50%);
+  transform: translate(50%, 50%);
   width: 65px;
   height: 65px;
   border-radius: 50%;
   border: 0;
   background-color: $color-accent;
   cursor: pointer;
+  transition: $default-transition;
 
-  @media (max-width: $viewport--lg) and (min-width: $viewport--md + 1){
+  &:hover {
+    background-color: $color-btn-hover;
+  }
+
+  &:active {
+    background-color: $color-accent;
+  }
+
+  @media (max-width: $viewport--lg) and (min-width: $viewport--md + 1) {
     width: 90px;
     height: 90px;
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 50%;
     right: 50%;
-    transform: translate(54%,50%);
+    transform: translate(54%, 50%);
     border-style: solid;
     border-color: transparent transparent transparent $color-default-black;
-    border-width: 9px 0 9px 13px ;
+    border-width: 9px 0 9px 13px;
 
     @media (max-width: $viewport--lg) and (min-width: $viewport--md + 1) {
-      border-width: 12px 0 12px 18px ;
-      transform: translate(64%,50%);
+      border-width: 12px 0 12px 18px;
+      transform: translate(64%, 50%);
     }
   }
 }

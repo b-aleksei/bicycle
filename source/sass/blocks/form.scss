@@ -61,22 +61,6 @@
   transform: translate(100%);
 }
 
-.form__error {
-  position: absolute;
-  bottom: -15px;
-  left: 0;
-  width: 100%;
-  color: $color-error;
-  font-size: 11px;
-  opacity: 0;
-  transition: opacity $default-transition;
-}
-
-.form__invalid .form__error {
-  opacity: 1;
-}
-
-
 .form button[type="submit"] {
   display: block;
   font-size: 15px;
@@ -87,6 +71,15 @@
   color: $color-default-black;
   background-color: $color-accent;
   border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
+
+  &:active {
+    background-color: $color-accent;
+  }
 }
 
 @media (max-width: $viewport--lg) {
