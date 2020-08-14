@@ -1,23 +1,86 @@
 .contact {
-  display: flex;
-  max-width: 558px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: auto;
-  padding: 0;
-  list-style: none;
+  max-width: 957px;
+  margin: 144px auto 0 auto;
+
+  @media (max-width: $viewport--lg) {
+    max-width: 698px;
+    margin-top: 66px;
+  }
+
+  @media (max-width: $viewport--md) {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 72px;
+  }
 }
 
-.contact__link {
-  position: relative;
-  display: block;
-  text-decoration: none;
-  color: $color-link-footer;
-  padding-left: 40px;
+.contact__info {
+  width: 500px;
+  margin: 0 auto 43px auto;
+  padding: 0 9px 0 0;
+
+  @media (max-width: $viewport--lg) {
+     width: auto;
+    padding: 0;
+    margin-bottom: 22px;
+  }
+
+  @media (max-width: $viewport--md) {
+    width: 100%;
+    padding: 0 10%;
+    margin-bottom: 19px;
+  }
 }
 
-.contact__icon {
-  position: absolute;
-  top: 0;
-  left: 0;
+.contact__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: -0.03em;
+  color: $color-title;
+
+  @media (max-width: $viewport--lg) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $viewport--md) {
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+}
+
+.contact__address {
+  padding-right: 5px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.6;
+  color: $color-black-alfa;
+
+  @media (max-width: $viewport--md) {
+    padding-right: 0;
+    line-height: 1.8;
+  }
+}
+
+.contact__map-wrap {
+  height: 530px;
+  background-image: url('../img/desktop/map-plug.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $viewport--lg) {
+    background-image: url('../img/tablet/map-plug.jpg');
+    height: 545px;
+  }
+
+  @media (max-width: $viewport--md) {
+    background-image: url('../img/mobile/map-plug.jpg');
+    height: 250px;
+  }
+}
+
+.contact__map {
+  //display: none;
+  width: 100%;
+  height: 100%;
 }

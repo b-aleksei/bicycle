@@ -3,7 +3,7 @@ let makeSmoothScroll = function (link) {
   link.addEventListener('click', function (e) {
     e.preventDefault();
 
-    let targetId = this.getAttribute('href');
+    let targetId = link.getAttribute('href');
     let target = document.querySelector(targetId);
 
     if (target) {
