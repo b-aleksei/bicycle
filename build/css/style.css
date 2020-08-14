@@ -398,7 +398,7 @@ body {
   bottom: -15px;
   left: 0;
   width: 100%;
-  color: #b00020;
+  color: red;
   font-size: 11px;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
