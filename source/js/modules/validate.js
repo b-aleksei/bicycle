@@ -1,5 +1,3 @@
-// if (Promise) { // проверка на ie
-
 const regExpName = /^[\s-]+$|^\s*-+|[^A-Za-zА-Яа-я\-\s']+/;
 const regExpPhone = /^[\s-+()]+$|^[-()]+|[^\d-\s+()]+/;
 const forms = document.querySelectorAll('form');
@@ -139,4 +137,3 @@ const openClosePopup = function (obj) {
   };
   openPopup();
 };
-// }
