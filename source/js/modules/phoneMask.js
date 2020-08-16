@@ -1,6 +1,6 @@
 const COUNTRY_CODE = '+7';
 
-const onInputPhoneInput = ({target,}) => {
+const onInputPhoneInput = ({target}) => {
   const matrix = `${COUNTRY_CODE} (___) ___ __ __`;
   const def = matrix.replace(/\D/g, '');
   let i = 0;
@@ -20,7 +20,7 @@ const onInputPhoneInput = ({target,}) => {
   });
 };
 
-const onFocusPhoneInput = ({target,}) => {
+const onFocusPhoneInput = ({target}) => {
   if (!target.value) {
     target.value = COUNTRY_CODE;
   }
@@ -28,7 +28,7 @@ const onFocusPhoneInput = ({target,}) => {
   target.addEventListener('blur', onBlurPhoneInput);
 };
 
-const onBlurPhoneInput = ({target,}) => {
+const onBlurPhoneInput = ({target}) => {
   if (target.value === COUNTRY_CODE) {
     target.value = '';
   }
