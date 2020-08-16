@@ -20,6 +20,7 @@ body {
 .body-lock {
   width: 100%;
   position: fixed;
+  overflow-y: scroll;
 }
 
 .visually-hidden {
@@ -38,4 +39,25 @@ body {
 .container {
   max-width: $viewport--xl;
   margin: 0 auto;
+}
+
+.pulse {
+  position: absolute;
+  display: block;
+  background-color: aqua;
+  border-radius: 50%;
+  animation: pulse 0.9s ease-out;
+  transform: scale(0);
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(2);
+    background-color: $color-default-white;
+    opacity: 0;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
 }

@@ -1,12 +1,15 @@
 .footer {
   margin-top: 40px;
+  margin-bottom: 96px;
 
   @media (max-width: $viewport--lg) {
     margin-top: 22px;
+    margin-bottom: 52px;
   }
 
   @media (max-width: $viewport--md) {
     margin-top: 29px;
+    margin-bottom: 36px;
   }
 }
 

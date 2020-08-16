@@ -39,7 +39,8 @@ body {
 
 .body-lock {
   width: 100%;
-  position: fixed; }
+  position: fixed;
+  overflow-y: scroll; }
 
 .visually-hidden {
   position: absolute;
@@ -57,6 +58,33 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto; }
+
+.pulse {
+  position: absolute;
+  display: block;
+  background-color: aqua;
+  border-radius: 50%;
+  -webkit-animation: pulse 0.9s ease-out;
+          animation: pulse 0.9s ease-out;
+  -webkit-transform: scale(0);
+          transform: scale(0); }
+
+@-webkit-keyframes pulse {
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    background-color: #ffffff;
+    opacity: 0; } }
+
+@keyframes pulse {
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    background-color: #ffffff;
+    opacity: 0; } }
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none; }
 
 .nav {
   position: relative;
@@ -204,7 +232,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1440px;
   margin: auto;
   background-color: #000000;
   background-image: url("../img/desktop/main-bg@1x.jpg");
@@ -410,20 +437,23 @@ body {
           transform: translate(100%); }
 
 .form button[type="submit"] {
+  position: relative;
   display: block;
+  height: 51px;
+  padding: 0;
   font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.02em;
-  height: 51px;
   color: #000000;
   background-color: #0ad9c6;
   border: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  overflow: hidden; }
   .form button[type="submit"]:hover {
     background-color: rgba(10, 217, 198, 0.7); }
   .form button[type="submit"]:active {
-    background-color: #0ad9c6; }
+    color: #ffffff; }
 
 @media (max-width: 1023px) {
   .form {
@@ -799,11 +829,13 @@ body {
   background-color: #0ad9c6;
   cursor: pointer;
   -webkit-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  overflow: hidden;
+  /*  &:focus{
+    outline: 3px solid tomato;
+  }*/ }
   .video__btn:hover {
     background-color: rgba(10, 217, 198, 0.7); }
-  .video__btn:active {
-    background-color: #0ad9c6; }
   @media (max-width: 1023px) and (min-width: 768px) {
     .video__btn {
       width: 90px;
@@ -896,13 +928,16 @@ body {
   height: 100%; }
 
 .footer {
-  margin-top: 40px; }
+  margin-top: 40px;
+  margin-bottom: 96px; }
   @media (max-width: 1023px) {
     .footer {
-      margin-top: 22px; } }
+      margin-top: 22px;
+      margin-bottom: 52px; } }
   @media (max-width: 767px) {
     .footer {
-      margin-top: 29px; } }
+      margin-top: 29px;
+      margin-bottom: 36px; } }
 
 .footer__list {
   display: -webkit-box;
@@ -975,10 +1010,24 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.5); }
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in; }
+  .modal--active {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto; }
 
 .modal--invisible {
-  display: none; }
+  display: block;
+  opacity: 1; }
 
 .modal__wrap {
   position: absolute;
