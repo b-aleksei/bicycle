@@ -86,6 +86,13 @@ body {
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none; }
 
+.op {
+  opacity: 0; }
+
+.tr {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in; }
+
 .nav {
   position: relative;
   padding: 25px 30px 0 30px; }
@@ -566,13 +573,13 @@ body {
     margin-top: 6px; } }
 
 .variety {
-  padding-top: 251px; }
+  margin-top: 276px; }
   @media (max-width: 1023px) {
     .variety {
-      padding-top: 100px; } }
+      margin-top: 100px; } }
   @media (max-width: 767px) {
     .variety {
-      padding-top: 0; } }
+      margin-top: 0; } }
 
 .variety__title {
   margin-right: 11px;
@@ -830,10 +837,7 @@ body {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  overflow: hidden;
-  /*  &:focus{
-    outline: 3px solid tomato;
-  }*/ }
+  overflow: hidden; }
   .video__btn:hover {
     background-color: rgba(10, 217, 198, 0.7); }
   @media (max-width: 1023px) and (min-width: 768px) {

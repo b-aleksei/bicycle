@@ -1,15 +1,12 @@
-$w: 342px;
-$s: 15px;
-
 .variety {
-  padding-top: 251px;
+  margin-top: 276px;
 
   @media (max-width: $viewport--lg) {
-    padding-top: 100px;
+    margin-top: 100px;
   }
 
   @media (max-width: $viewport--md) {
-    padding-top: 0;
+    margin-top: 0;
   }
 }
 
