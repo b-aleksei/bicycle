@@ -41,6 +41,8 @@ body {
   margin: 0 auto;
 }
 
+// для анимации
+
 .pulse {
   position: absolute;
   display: block;
@@ -60,4 +62,13 @@ body {
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+
+// для плавного появления
+.op {
+  opacity: 0;
+}
+
+.tr {
+  transition: 0.3s ease-in;
 }
