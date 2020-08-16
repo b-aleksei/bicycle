@@ -135,14 +135,15 @@
   background-color: $color-accent;
   cursor: pointer;
   transition: $default-transition;
+  overflow: hidden;
 
   &:hover {
     background-color: $color-btn-hover;
   }
 
-  &:active {
-    background-color: $color-accent;
-  }
+/*  &:focus{
+    outline: 3px solid tomato;
+  }*/
 
   @media (max-width: $viewport--lg) and (min-width: $viewport--md + 1) {
     width: 90px;
