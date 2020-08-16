@@ -49,6 +49,7 @@ body {
   animation: pulse 0.9s ease-out;
   transform: scale(0);
 }
+
 @keyframes pulse {
   to {
     transform: scale(2);

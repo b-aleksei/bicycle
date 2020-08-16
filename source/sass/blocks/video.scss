@@ -141,10 +141,6 @@
     background-color: $color-btn-hover;
   }
 
-/*  &:focus{
-    outline: 3px solid tomato;
-  }*/
-
   @media (max-width: $viewport--lg) and (min-width: $viewport--md + 1) {
     width: 90px;
     height: 90px;

@@ -11,9 +11,12 @@ const onInputPhoneInput = ({target,}) => {
 
   target.value = '';
   Array.from(matrix).forEach((item) => {
-    target.value += /[_\d]/.test(item) && val.length > i ?
-      val.charAt(i++) :
-      val.length <= i ? '' : item;
+    let isValNumber = /[_\d]/.test(item) && val.length > i;
+    if (isValNumber) {
+      target.value += val.charAt(i++);
+    } else {
+      target.value += val.length <= i ? '' : item;
+    }
   });
 };
 
