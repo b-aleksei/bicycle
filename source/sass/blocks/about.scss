@@ -8,7 +8,7 @@
   }
 }
 
-.about-us__title {
+.about-us h2 {
   font-size: 30px;
   font-weight: 600;
   line-height: 1;
@@ -49,6 +49,13 @@
   flex-direction: column;
   width: 263px;
 
+  & span {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: $color-accent;
+  }
+
   @media (max-width: $viewport--lg) {
     &:nth-child(n + 3) {
       margin-top: 19px;
@@ -59,25 +66,20 @@
     &:not(:first-child) {
       margin-top: 32px;
     }
-
-    .about-us__count--three {
-      margin-top: 26px;
-    }
-
-    .about-us__count--four {
-      margin-top: 29px;
-    }
   }
 }
 
-.about-us__count {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: $color-accent;
+@media (max-width: $viewport--md) {
+  .about-us__item--three span {
+    margin-top: 26px;
+  }
+
+  .about-us__item--four span {
+    margin-top: 29px;
+  }
 }
 
-.about-us__content {
+.about-us__list p {
   margin-top: 16px;
   font-size: 22px;
   letter-spacing: -0.5px;
@@ -91,13 +93,13 @@
   }
 }
 
-.about-us__content--margin {
+.about-us__item--margin p {
   @media (max-width: $viewport--md) {
     margin-top: 10px;
   }
 }
 
-.about-us__content--margin2 {
+.about-us__item--margin2 p {
   @media (max-width: $viewport--md) {
     margin-top: 6px;
   }

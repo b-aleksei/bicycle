@@ -132,6 +132,9 @@ body {
 
 .nav__item {
   margin-bottom: 11px; }
+  @media (max-width: 1023px) {
+    .nav__item:last-child {
+      margin-bottom: 8px; } }
 
 .nav__link {
   display: block;
@@ -214,6 +217,17 @@ body {
   .js-enable .nav__list {
     display: none; } }
 
+@media (max-width: 767px) {
+  .nav--menu-active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 1; } }
+
 .nav--menu-active .nav__toggle {
   background-color: transparent; }
 
@@ -231,9 +245,20 @@ body {
 
 .nav--menu-active .nav__list {
   display: block; }
+  @media (max-width: 1023px) {
+    .nav--menu-active .nav__list {
+      padding-top: 0;
+      padding-bottom: 85px; } }
+  @media (max-width: 920px) {
+    .nav--menu-active .nav__list {
+      padding-bottom: 40px; } }
   @media (max-width: 767px) {
     .nav--menu-active .nav__list {
-      position: absolute; } }
+      padding-top: 50px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translate(-50%);
+              transform: translate(-50%); } }
 
 .intro {
   display: -webkit-box;
@@ -335,39 +360,39 @@ body {
   .offer__logo {
     left: 18px; } }
 
-.offer__title {
+.offer__info p:first-of-type {
   font-size: 46px;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: -0.004em;
   margin: 24px 0 24px 0; }
   @media (max-width: 1023px) {
-    .offer__title {
+    .offer__info p:first-of-type {
       width: 404px;
       margin: 134px auto 20px 6px;
       font-size: 30px;
       line-height: 1.4; } }
   @media (max-width: 767px) {
-    .offer__title {
+    .offer__info p:first-of-type {
       text-align: center;
       width: 288px;
       margin: 119px auto 20px auto; } }
 
-.offer__content {
+.offer__info p:last-of-type {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: -0.005em;
   color: #ffffff; }
   @media (max-width: 1023px) {
-    .offer__content {
+    .offer__info p:last-of-type {
       width: 400px;
       margin: auto;
       font-size: 18px;
       line-height: 1.8;
       text-align: center; } }
   @media (max-width: 767px) {
-    .offer__content {
+    .offer__info p:last-of-type {
       width: 288px; } }
 
 .form {
@@ -491,7 +516,7 @@ body {
     .about-us {
       margin-top: 70px; } }
 
-.about-us__title {
+.about-us h2 {
   font-size: 30px;
   font-weight: 600;
   line-height: 1;
@@ -499,7 +524,7 @@ body {
   margin-left: 17px;
   margin-bottom: 48px; }
   @media (max-width: 1023px) {
-    .about-us__title {
+    .about-us h2 {
       font-size: 24px;
       line-height: 1.7;
       margin-left: 0;
@@ -535,41 +560,42 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 263px; }
+  .about-us__item span {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #0ad9c6; }
   @media (max-width: 1023px) {
     .about-us__item:nth-child(n + 3) {
       margin-top: 19px; } }
   @media (max-width: 767px) {
     .about-us__item:not(:first-child) {
-      margin-top: 32px; }
-    .about-us__item .about-us__count--three {
-      margin-top: 26px; }
-    .about-us__item .about-us__count--four {
-      margin-top: 29px; } }
+      margin-top: 32px; } }
 
-.about-us__count {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: #0ad9c6; }
+@media (max-width: 767px) {
+  .about-us__item--three span {
+    margin-top: 26px; }
+  .about-us__item--four span {
+    margin-top: 29px; } }
 
-.about-us__content {
+.about-us__list p {
   margin-top: 16px;
   font-size: 22px;
   letter-spacing: -0.5px;
   color: #000000; }
   @media (max-width: 767px) {
-    .about-us__content {
+    .about-us__list p {
       font-size: 18px;
       line-height: 1.87;
       margin-top: 15px;
       margin-bottom: 0; } }
 
 @media (max-width: 767px) {
-  .about-us__content--margin {
+  .about-us__item--margin p {
     margin-top: 10px; } }
 
 @media (max-width: 767px) {
-  .about-us__content--margin2 {
+  .about-us__item--margin2 p {
     margin-top: 6px; } }
 
 .variety {
@@ -581,7 +607,7 @@ body {
     .variety {
       margin-top: 0; } }
 
-.variety__title {
+.variety h2 {
   margin-right: 11px;
   margin-bottom: 41px;
   font-weight: 600;
@@ -590,11 +616,11 @@ body {
   letter-spacing: -0.03em;
   color: #1f1f1f; }
   @media (max-width: 1023px) {
-    .variety__title {
+    .variety h2 {
       margin: 0 auto 34px auto;
       font-size: 24px; } }
   @media (max-width: 767px) {
-    .variety__title {
+    .variety h2 {
       margin-top: 133px; } }
 
 .variety__list {
@@ -708,7 +734,7 @@ body {
 .variety__wrap-img {
   margin: 0; }
 
-.variety__img {
+.variety__wrap-img img {
   width: 100%;
   height: auto; }
 
@@ -779,22 +805,22 @@ body {
       width: auto;
       margin-bottom: 55px; } }
 
-.video__title {
+.video__description h2 {
   margin-bottom: 13px;
   font-weight: 600;
   font-size: 30px;
   color: #ffffff;
   letter-spacing: -0.03em; }
   @media (max-width: 1023px) {
-    .video__title {
+    .video__description h2 {
       margin-bottom: 18px;
       text-align: center;
       font-size: 24px; } }
   @media (max-width: 767px) {
-    .video__title {
+    .video__description h2 {
       padding-right: 10px; } }
 
-.video__text {
+.video__description p {
   margin-top: 0;
   margin-left: 18px;
   font-weight: 300;
@@ -802,7 +828,7 @@ body {
   letter-spacing: -0.005em;
   color: rgba(255, 255, 255, 0.7); }
   @media (max-width: 1023px) {
-    .video__text {
+    .video__description p {
       text-align: center;
       margin-left: 0; } }
 
@@ -888,28 +914,28 @@ body {
       padding: 0 10%;
       margin-bottom: 19px; } }
 
-.contact__title {
+.contact h2 {
   text-align: center;
   font-weight: 600;
   font-size: 30px;
   letter-spacing: -0.03em;
   color: #1f1f1f; }
   @media (max-width: 1023px) {
-    .contact__title {
+    .contact h2 {
       font-size: 24px; } }
   @media (max-width: 767px) {
-    .contact__title {
+    .contact h2 {
       font-size: 18px;
       margin-bottom: 22px; } }
 
-.contact__address {
+.contact p {
   padding-right: 5px;
   text-align: center;
   font-size: 17px;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.7); }
   @media (max-width: 767px) {
-    .contact__address {
+    .contact p {
       padding-right: 0;
       line-height: 1.8; } }
 
