@@ -3,6 +3,9 @@ export default function (obj) {
   const classActive = obj.classActive;
   const buttonsClose = obj.buttonsClose;
 
+  if (!overlay || !buttonsClose) {
+    return;
+  }
   const body = document.body;
   // открытие модального окна
   const openPopup = function () {

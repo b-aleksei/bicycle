@@ -37,6 +37,12 @@
 
 .nav__item {
   margin-bottom: 11px;
+
+  @media (max-width: $viewport--lg) {
+    &:last-child {
+      margin-bottom: 8px;
+    }
+  }
 }
 
 .nav__link {
@@ -123,26 +129,41 @@
   }
 }
 
-.js-enable {
-  @media (max-width: $viewport--lg) {
-    .nav__toggle {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 5;
-    }
 
-    .nav__list {
-      display: none;
-    }
+@media (max-width: $viewport--lg) {
+  .js-enable .nav__toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  .js-enable .nav__list {
+    display: none;
   }
 }
 
 .nav--menu-active {
+
+  @media (max-width: $viewport--md) {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: $color-default-white;
+      z-index: 1;
+    }
+  }
+
+
   .nav__toggle {
     background-color: transparent;
   }
+
   // Меняет бургер на крестик
   .nav__burger {
     width: 0;
@@ -160,8 +181,20 @@
   .nav__list {
     display: block;
 
+    @media (max-width: $viewport--lg) {
+      padding-top: 0;
+      padding-bottom: 85px;
+    }
+
+    @media (max-width: 920px) {
+      padding-bottom: 40px;
+    }
+
     @media (max-width: $viewport--md) {
+      padding-top: 50px;
       position: absolute;
+      left: 50%;
+      transform: translate(-50%);
     }
   }
 }
