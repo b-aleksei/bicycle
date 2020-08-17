@@ -78,13 +78,15 @@ const onSubmit = function (e) {
 
 // валидация форм на главной странице
 forms.forEach(function (form) {
-  for (let i = 0; i < form.elements.length; i++) {
-    let input = form.elements[i];
+  form.querySelectorAll('input').forEach((input) => {
     if (input.dataset.validate) {
-      input.value = localStorage.getItem(input.name);
+      let value = localStorage.getItem(input.name);
+      if (value) {
+        input.value = value;
+      }
       input.parentElement.insertAdjacentHTML('afterbegin', signSuccess); // добавляет зеленую галочку если валидно
     }
-  }
+  });
   initPhoneMask(phoneInput);
   form.addEventListener('focusin', onValidate);
   form.addEventListener('submit', onSubmit);
