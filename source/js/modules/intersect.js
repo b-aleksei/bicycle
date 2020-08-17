@@ -1,7 +1,7 @@
-if (IntersectionObserver) {
+try {
 
   const options = {
-    rootMargin: '0px 0px -50px 0px',
+    rootMargin: '0px 0px -30px 0px',
   };
 
   const views = ['.form', '.about-us', '.variety', '.video', '.contact', 'footer'];
@@ -25,9 +25,13 @@ if (IntersectionObserver) {
 
     views.forEach((view) => {
       let target = document.querySelector(view);
-      target.classList.add('op', 'tr');
-      observer.observe(target);
+      if (target) {
+        target.classList.add('op', 'tr');
+        observer.observe(target);
+      }
     });
   });
 
+} catch (e) {
+  // console.log(e);
 }
