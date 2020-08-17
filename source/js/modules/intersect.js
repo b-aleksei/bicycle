@@ -1,7 +1,7 @@
 if (IntersectionObserver) {
 
   const options = {
-    rootMargin: '100px 0px 0px 0px',
+    rootMargin: '0px 0px -50px 0px',
   };
 
   const views = ['.form', '.about-us', '.variety', '.video', '.contact', 'footer'];
