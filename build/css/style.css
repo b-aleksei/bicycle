@@ -1039,8 +1039,8 @@ body {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: opacity 0.3s ease-in;
-  transition: opacity 0.3s ease-in;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
   overflow-y: scroll; }
   .modal--active {
     -webkit-transform: scale(1);
