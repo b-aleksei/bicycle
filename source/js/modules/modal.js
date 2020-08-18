@@ -9,7 +9,7 @@ export default function (obj) {
   const body = document.body;
   // открытие модального окна
   const openPopup = function () {
-    overlay.classList.add(classActive);
+    overlay.parentElement.classList.add(classActive);
     document.addEventListener('keydown', onCloseModalKey);
     overlay.addEventListener('mousedown', onCloseModalMouse);
     body.dataset.scrollY = self.pageYOffset; // сохраним значение скролла
@@ -34,7 +34,7 @@ export default function (obj) {
   };
 
   const removeHandler = function () {
-    overlay.classList.remove(classActive);
+    overlay.parentElement.classList.remove(classActive);
     document.removeEventListener('keydown', onCloseModalKey);
     overlay.removeEventListener('mousedown', onCloseModalMouse);
     body.classList.remove('body-lock', 'body-no-event');
