@@ -36,7 +36,9 @@ export default function (obj) {
     overlay.parentElement.classList.remove(classActive);
     document.removeEventListener('keydown', onCloseModalKey);
     overlay.removeEventListener('mousedown', onCloseModalMouse);
-    enableScrolling();
+    // таймаут нужен, чтобы исключить подергивание
+    // тайминг стоит менять в зависимости от анимации закрытия
+    setTimeout(enableScrolling, 300);
   };
   openPopup();
 }
