@@ -3,6 +3,7 @@
 const navButton = document.querySelector('.nav__toggle');
 const navMain = document.querySelector('.nav');
 let isTablet = false;
+const modal = document.querySelector('.modal');
 
 if (document.documentElement.clientWidth < 1024) {
   isTablet = true;
@@ -41,8 +42,10 @@ if (navMain && navButton) {
     if (document.documentElement.clientWidth >= 1024 && isTablet) {
       navButton.setAttribute('aria-expanded', 'false');
       navMain.classList.remove('nav--menu-active');
-      document.body.classList.remove('body-lock');
       isTablet = false;
+      if (!modal.classList.contains('modal--active')) {
+        document.body.classList.remove('body-lock');
+      }
     }
     if (document.documentElement.clientWidth < 1024 && !isTablet) {
       isTablet = true;
