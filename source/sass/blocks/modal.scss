@@ -10,6 +10,7 @@
   opacity: 0;
   pointer-events: none;
   transition: $default-transition ease-in;
+  overflow-y: scroll;
 
   &--active {
     transform: scale(1);
@@ -20,11 +21,17 @@
 }
 
 .modal__wrap {
-  position: absolute;
-  bottom: 50%;
-  right: 50%;
+  position: fixed;
+  //bottom: 50%;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: Max(1px, calc(50vh - 225px));
   padding: 80px 47px;
-  transform: translate(50%, 50%);
   width: 480px;
   height: 450px;
   text-align: center;
