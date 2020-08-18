@@ -5,7 +5,7 @@ const phoneInput = document.querySelector('input[name=phone]');
 const regExpName = /^[\s-]+$|^\s*-+|[^A-Za-zА-Яа-я\-.\s']+/;
 const forms = document.querySelectorAll('form');
 const successSend = {
-  overlay: document.querySelector('.modal'),
+  overlay: document.querySelector('.modal__wrap'),
   classActive: 'modal--active',
   buttonsClose: document.querySelectorAll('.modal__close'),
 };
