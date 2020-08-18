@@ -17,6 +17,7 @@
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
+    z-index: 10;
   }
 }
 
@@ -28,7 +29,7 @@
   bottom: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: Max(1px, calc(50vh - 225px));
+  margin-top: maX(1px, calc(50vh - 225px));
   padding: 80px 47px;
   width: 480px;
   height: 450px;
