@@ -42,6 +42,9 @@ body {
   position: fixed;
   overflow-y: scroll; }
 
+.body-no-event {
+  pointer-events: none; }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -704,11 +707,22 @@ body {
   color: inherit; }
 
 .variety__wrap-img {
+  width: 384px;
   margin: 0; }
+  @media (max-width: 1023px) {
+    .variety__wrap-img {
+      width: 270px;
+      height: 300px; } }
 
 .variety__wrap-img img {
+  display: block;
   width: 100%;
-  height: auto; }
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; }
+  @media (max-width: 1023px) {
+    .variety__wrap-img img {
+      border-radius: 10px; } }
 
 .variety__description {
   display: block;
@@ -1018,8 +1032,8 @@ body {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
   overflow-y: scroll; }
   .modal--active {
     -webkit-transform: scale(1);

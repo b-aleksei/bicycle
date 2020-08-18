@@ -2,7 +2,28 @@
 // main menu opener
 const navButton = document.querySelector('.nav__toggle');
 const navMain = document.querySelector('.nav');
+const pictures = document.querySelectorAll('img[data-object-fit]');
 let isTablet = false;
+
+const removeAttr = function (pictures) {
+  console.log('start');
+  if (pictures) {
+    pictures.forEach((img) => {
+      if (!isTablet) {
+        img.removeAttribute('data-object-fit');
+        // img.setAttribute('data-object-fit', 'none');
+      } else {
+        img.setAttribute('data-object-fit', 'cover');
+      }
+    });
+  }
+};
+
+if (document.documentElement.clientWidth < 1024) {
+  isTablet = true;
+} else {
+  removeAttr(pictures);
+}
 
 if (navMain && navButton) {
 
@@ -39,9 +60,11 @@ if (navMain && navButton) {
       navMain.classList.remove('nav--menu-active');
       document.body.classList.remove('body-lock');
       isTablet = false;
+      removeAttr(pictures);
     }
-    if (document.documentElement.clientWidth < 1024) {
+    if (document.documentElement.clientWidth < 1024 && !isTablet) {
       isTablet = true;
+      removeAttr(pictures);
     }
   };
 }

@@ -13,7 +13,7 @@ export default function (obj) {
     document.addEventListener('keydown', onCloseModalKey);
     overlay.addEventListener('mousedown', onCloseModalMouse);
     body.dataset.scrollY = self.pageYOffset; // сохраним значение скролла
-    body.classList.add('body-lock');
+    body.classList.add('body-lock', 'body-no-event');
     body.style.top = -body.dataset.scrollY + 'px';
   };
   //  Обработчик на оверлее для закрытия попапа по клику на нем или на соотв. кнопки
@@ -37,7 +37,7 @@ export default function (obj) {
     overlay.classList.remove(classActive);
     document.removeEventListener('keydown', onCloseModalKey);
     overlay.removeEventListener('mousedown', onCloseModalMouse);
-    body.classList.remove('body-lock');
+    body.classList.remove('body-lock', 'body-no-event');
     window.scrollTo(0, body.dataset.scrollY);
   };
   openPopup();
