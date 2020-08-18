@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint source/sass/**/*.scss --syntax scss",
     "eslint": "eslint source/js/",
     "scss:fix": "stylelint source/sass/ --fix",
     "js:fix": "eslint source/js/**/* --fix",

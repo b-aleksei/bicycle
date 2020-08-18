@@ -1,4 +1,17 @@
-let makeSmoothScroll = function (link) {
+const goToTarget = function (target) { // фолбэк для ie11
+  const y = target.offsetTop;
+
+  const moveTo = function () {
+    if (window.pageYOffset < y) {
+      window.scrollBy(0, 60);
+      setTimeout(moveTo);
+    }
+  };
+
+  moveTo();
+};
+
+const makeSmoothScroll = function (link) {
 
   link.addEventListener('click', function (e) {
     e.preventDefault();
@@ -6,11 +19,21 @@ let makeSmoothScroll = function (link) {
     let targetId = link.getAttribute('href');
     let target = document.querySelector(targetId);
 
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
+
+    try {
+      if (target) {
+
+        if (!Promise) { // примитивная проверка для ie 11
+          goToTarget(target);
+        } else {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      }
+    } catch (er) {
+      // console.log(er);
     }
   });
 };
