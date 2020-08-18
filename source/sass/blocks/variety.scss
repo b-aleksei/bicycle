@@ -170,19 +170,42 @@
   color: inherit;
 }
 
-.variety__wrap-img {
+.variety__wrap {
   margin: 0;
 }
 
+.variety__wrap-img {
+  position: relative;
+  width: 342px;
+  margin: 0;
+  border-radius: 10px;
+
+  @media (max-width: $viewport--lg) {
+    width: 270px;
+    height: 300px;
+    overflow: hidden;
+  }
+}
+
 .variety__wrap-img img {
+  display: block;
   width: 100%;
   height: auto;
+
+  @media (max-width: $viewport--lg) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
 }
 
 .variety__description {
   display: block;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 21px;
   font-weight: 600;
   font-size: 22px;
   letter-spacing: -1px;
