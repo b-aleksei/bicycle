@@ -5,12 +5,14 @@
   right: 0;
   bottom: 0;
   background-color: $color-overlay;
-  transform: scale(1.2);
+  transform: scale(1.5);
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: $default-transition ease-in;
-  overflow-y: scroll;
+  transition: opacity $default-transition,
+    visibility $default-transition,
+    transform $default-transition;
+  overflow-y: auto;
 
   &--active {
     transform: scale(1);
@@ -32,16 +34,24 @@
 .modal__inner {
   padding: 80px 47px;
   width: 480px;
-  height: 450px;
   text-align: center;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   background-color: $color-default-white;
+
+  @media (max-width: $viewport--md) {
+    width: 320px;
+  }
 }
 
 .modal__title {
   margin-bottom: 18px;
   letter-spacing: -0.05rem;
+
+  @media (max-width: $viewport--md) {
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
 }
 
 .modal__content {
@@ -58,18 +68,4 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
-}
-
-
-@media (max-width: $viewport--md) {
-  .modal__wrap {
-    padding: 50px 0 0 0;
-    width: 320px;
-    text-align: center;
-  }
-
-  .modal__title {
-    margin-top: 30px;
-    margin-bottom: 25px;
-  }
 }
