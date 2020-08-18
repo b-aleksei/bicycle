@@ -174,33 +174,35 @@
   margin: 0;
 }
 
-.variety__wrap-img {
-  position: relative;
+.variety__img--tablet {
+  display: none;
+
+  @media (max-width: $viewport--lg) {
+    display: block;
+  }
+}
+
+.variety__img--desktop {
+  @media (max-width: $viewport--lg) {
+    display: none;
+  }
+}
+
+.variety__img {
   width: 342px;
-  margin: 0;
   border-radius: 10px;
 
   @media (max-width: $viewport--lg) {
     width: 270px;
-    height: 300px;
-    overflow: hidden;
   }
 }
 
-.variety__wrap-img img {
+.variety__img img {
   display: block;
   width: 100%;
   height: auto;
-
-  @media (max-width: $viewport--lg) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-  }
 }
+
 
 .variety__description {
   display: block;
