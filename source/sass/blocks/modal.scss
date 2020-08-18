@@ -10,8 +10,8 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity $default-transition,
-  visibility $default-transition,
-  transform $default-transition;
+    visibility $default-transition,
+    transform $default-transition;
   overflow-y: auto;
 
   &--active {
@@ -69,4 +69,3 @@
   border-radius: 10px;
   cursor: pointer;
 }
-
