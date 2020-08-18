@@ -9,7 +9,7 @@
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity $default-transition ease-in;
+  transition: $default-transition ease-in;
   overflow-y: scroll;
 
   &--active {
