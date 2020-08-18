@@ -22,7 +22,7 @@ const removeAttr = function (pictures) {
 if (document.documentElement.clientWidth < 1024) {
   isTablet = true;
 } else {
-  removeAttr(pictures);
+  // removeAttr(pictures);
 }
 
 if (navMain && navButton) {
@@ -60,11 +60,11 @@ if (navMain && navButton) {
       navMain.classList.remove('nav--menu-active');
       document.body.classList.remove('body-lock');
       isTablet = false;
-      removeAttr(pictures);
+      // removeAttr(pictures);
     }
     if (document.documentElement.clientWidth < 1024 && !isTablet) {
       isTablet = true;
-      removeAttr(pictures);
+      // removeAttr(pictures);
     }
   };
 }
