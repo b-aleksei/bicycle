@@ -4,6 +4,10 @@ const navButton = document.querySelector('.nav__toggle');
 const navMain = document.querySelector('.nav');
 let isTablet = false;
 
+if (document.documentElement.clientWidth < 1024) {
+  isTablet = true;
+}
+
 if (navMain && navButton) {
 
   navMain.classList.add('js-enable');
@@ -40,7 +44,7 @@ if (navMain && navButton) {
       document.body.classList.remove('body-lock');
       isTablet = false;
     }
-    if (document.documentElement.clientWidth < 1024) {
+    if (document.documentElement.clientWidth < 1024 && !isTablet) {
       isTablet = true;
     }
   };
