@@ -392,27 +392,27 @@ body {
   padding: 0 30px; }
   .form input::-webkit-input-placeholder {
     font-size: 15px;
-    line-height: 20px;
+    line-height: 48px;
     color: rgba(28, 28, 28, 0.5);
     letter-spacing: 0.03em; }
   .form input::-moz-placeholder {
     font-size: 15px;
-    line-height: 20px;
+    line-height: 48px;
     color: rgba(28, 28, 28, 0.5);
     letter-spacing: 0.03em; }
   .form input:-ms-input-placeholder {
     font-size: 15px;
-    line-height: 20px;
+    line-height: 48px;
     color: rgba(28, 28, 28, 0.5);
     letter-spacing: 0.03em; }
   .form input::-ms-input-placeholder {
     font-size: 15px;
-    line-height: 20px;
+    line-height: 48px;
     color: rgba(28, 28, 28, 0.5);
     letter-spacing: 0.03em; }
   .form input::placeholder {
     font-size: 15px;
-    line-height: 20px;
+    line-height: 48px;
     color: rgba(28, 28, 28, 0.5);
     letter-spacing: 0.03em; }
 
