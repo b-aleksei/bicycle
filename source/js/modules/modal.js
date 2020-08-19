@@ -28,4 +28,3 @@ let focusTrapOne = createFocusTrap(container, {
 });
 
 export default focusTrapOne;
-
