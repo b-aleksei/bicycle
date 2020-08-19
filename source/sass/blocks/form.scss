@@ -80,8 +80,10 @@
     background-color: $color-btn-hover;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     color: $color-default-white;
+    background-color: $color-btn-hover;
   }
 }
 
@@ -89,11 +91,11 @@
   .form {
     margin: 64px auto 0 auto;
     width: 323px;
+  }
 
-    input {
-      border: 1px solid $color-bd-input;
-      padding-left: 21px;
-    }
+  .form input {
+    border: 1px solid $color-bd-input;
+    padding-left: 21px;
   }
 
   .form__title {
@@ -107,10 +109,10 @@
   .form {
     width: 320px;
     padding: 0 16px;
+  }
 
-    input {
-      padding-left: 25px;
-    }
+  .form input {
+    padding-left: 25px;
   }
 
   .form__title {

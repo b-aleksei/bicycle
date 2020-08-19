@@ -141,30 +141,27 @@
   .js-enable .nav__list {
     display: none;
   }
-}
 
-.nav--menu-active {
-  @media (max-width: $viewport--lg) {
-    .nav__toggle {
-      background-color: transparent;
-    }
 
-    // Меняет бургер на крестик
-    .nav__burger {
-      width: 0;
-      background-color: $color-close;
-    }
+  .nav--menu-active .nav__toggle {
+    background-color: transparent;
+  }
 
-    .nav__burger::before {
+  // Меняет бургер на крестик
+  .nav--menu-active .nav__burger {
+    width: 0;
+    background-color: $color-close;
+
+    &::before {
       transform: translateY(7px) rotate(-45deg);
     }
 
-    .nav__burger::after {
+    &::after {
       transform: translateY(-7px) rotate(45deg);
     }
+  }
 
-    .nav__list {
-      display: block;
-    }
+  .nav--menu-active .nav__list {
+    display: block;
   }
 }

@@ -1,19 +1,18 @@
 const body = document.body;
 
-// eslint-disable-next-line consistent-return
 const getScrollbarWidth = () => {
   const outer = document.createElement('div');
   outer.style.visibility = 'hidden';
   outer.style.overflow = 'scroll';
-  outer.style.msOverflowStyle = 'scrollbar';
-  body.appendChild(outer);
+  body.append(outer);
   const inner = document.createElement('div');
-  outer.appendChild(inner);
+  outer.append(inner);
   const scrollbarWidth = (outer.offsetWidth - inner.offsetWidth);
-  outer.parentNode.removeChild(outer);
+  outer.remove();
   if (body.offsetHeight > window.innerHeight) {
     return scrollbarWidth;
   }
+  return 0;
 };
 
 const getBodyScrollTop = () => {
