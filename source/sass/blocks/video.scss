@@ -137,7 +137,8 @@
   transition: $default-transition;
   overflow: hidden;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $color-btn-hover;
   }
 

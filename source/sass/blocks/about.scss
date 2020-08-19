@@ -49,13 +49,6 @@
   flex-direction: column;
   width: 263px;
 
-  & span {
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 1.4;
-    color: $color-accent;
-  }
-
   @media (max-width: $viewport--lg) {
     &:nth-child(n + 3) {
       margin-top: 19px;
@@ -69,14 +62,11 @@
   }
 }
 
-@media (max-width: $viewport--md) {
-  .about-us__item--three span {
-    margin-top: 26px;
-  }
-
-  .about-us__item--four span {
-    margin-top: 29px;
-  }
+.about-us__item span {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: $color-accent;
 }
 
 .about-us__list p {
@@ -93,14 +83,20 @@
   }
 }
 
-.about-us__item--margin p {
-  @media (max-width: $viewport--md) {
+@media (max-width: $viewport--md) {
+  .about-us__item--three span {
+    margin-top: 26px;
+  }
+
+  .about-us__item--four span {
+    margin-top: 29px;
+  }
+
+  .about-us__item--margin p {
     margin-top: 10px;
   }
-}
 
-.about-us__item--margin2 p {
-  @media (max-width: $viewport--md) {
+  .about-us__item--margin2 p {
     margin-top: 6px;
   }
 }
