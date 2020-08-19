@@ -62,18 +62,18 @@ const deleteHandler = function (e) {
 
 const onSubmit = function (e) {
   e.preventDefault();
-  /*  const form = e.currentTarget;
+  const form = e.currentTarget;
   for (let i = 0; i < form.elements.length; i++) {
     let input = form.elements[i];
     if (input.dataset.validate) {
       localStorage.setItem(input.name, input.value);
       input.parentElement.classList.remove('form__valid');
     }
-  }*/
+  }
   openClosePopup(successSend);
-/*  setTimeout(function () {
+  setTimeout(function () {
     form.reset();
-  });*/
+  });
 };
 
 try {
