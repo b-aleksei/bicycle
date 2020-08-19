@@ -7,7 +7,7 @@ const addElement = function (e) {
   el.classList.remove('pulse');
   setTimeout(() => {
     let rect = button.getBoundingClientRect();
-    if (!e.clientX) {
+    if (e.clientX <= 0) {
       el.style.left = 0 + 'px';
       el.style.top = rect.height / 2 - mValue / 2 + 'px';
     } else {
