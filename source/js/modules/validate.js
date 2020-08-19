@@ -5,7 +5,7 @@ const phoneInput = document.querySelector('input[name=phone]');
 const regExpName = /^[\s-]+$|^\s*-+|[^A-Za-zА-Яа-я\-.\s']+/;
 const forms = document.querySelectorAll('form');
 const successSend = {
-  overlay: document.querySelector('.modal__wrap'),
+  overlay: document.querySelector('.modal'),
   classActive: 'modal--active',
   buttonsClose: document.querySelectorAll('.modal__close'),
 };
@@ -62,18 +62,18 @@ const deleteHandler = function (e) {
 
 const onSubmit = function (e) {
   e.preventDefault();
-  const form = e.currentTarget;
+  /*  const form = e.currentTarget;
   for (let i = 0; i < form.elements.length; i++) {
     let input = form.elements[i];
     if (input.dataset.validate) {
       localStorage.setItem(input.name, input.value);
       input.parentElement.classList.remove('form__valid');
     }
-  }
+  }*/
   openClosePopup(successSend);
-  setTimeout(function () {
+/*  setTimeout(function () {
     form.reset();
-  });
+  });*/
 };
 
 try {
