@@ -76,18 +76,22 @@ const onSubmit = function (e) {
   });
 };
 
+try {
 // валидация форм на главной странице
-forms.forEach(function (form) {
-  form.querySelectorAll('input').forEach((input) => {
-    if (input.dataset.validate) {
-      let value = localStorage.getItem(input.name);
-      if (value) {
-        input.value = value;
+  forms.forEach(function (form) {
+    form.querySelectorAll('input').forEach((input) => {
+      if (input.dataset.validate) {
+        let value = localStorage.getItem(input.name);
+        if (value) {
+          input.value = value;
+        }
+        input.parentElement.insertAdjacentHTML('afterbegin', signSuccess); // добавляет зеленую галочку если валидно
       }
-      input.parentElement.insertAdjacentHTML('afterbegin', signSuccess); // добавляет зеленую галочку если валидно
-    }
+    });
+    initPhoneMask(phoneInput);
+    form.addEventListener('focusin', onValidate);
+    form.addEventListener('submit', onSubmit);
   });
-  initPhoneMask(phoneInput);
-  form.addEventListener('focusin', onValidate);
-  form.addEventListener('submit', onSubmit);
-});
+} catch (e) {
+  // console.log(e);
+}
