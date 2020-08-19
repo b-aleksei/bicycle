@@ -2,8 +2,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   background-color: $color-overlay;
   transform: scale(1.5);
   visibility: hidden;
@@ -12,7 +13,7 @@
   transition: opacity $default-transition,
     visibility $default-transition,
     transform $default-transition;
-  overflow-y: auto;
+  overflow-y: scroll;
 
   &--active {
     transform: scale(1);
@@ -23,17 +24,19 @@
   }
 }
 
-.modal__wrap {
+/*.modal__wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   min-height: 100%;
-}
+}*/
 
-.modal__inner {
+.modal__wrap {
+margin: auto;
   padding: 80px 47px;
   width: 480px;
+  height: 450px;
   text-align: center;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
   border-radius: 8px;

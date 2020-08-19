@@ -40,7 +40,7 @@ body {
 .body-lock {
   width: 100%;
   position: fixed;
-  overflow-y: auto; }
+  overflow-y: scroll; }
 
 .body-no-event {
   pointer-events: none; }
@@ -1033,8 +1033,11 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
@@ -1045,7 +1048,7 @@ body {
   transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
   transition: opacity 0.3s, visibility 0.3s, transform 0.3s, -webkit-transform 0.3s;
-  overflow-y: auto; }
+  overflow-y: scroll; }
   .modal--active {
     -webkit-transform: scale(1);
             transform: scale(1);
@@ -1054,29 +1057,25 @@ body {
     pointer-events: auto;
     z-index: 10; }
 
-.modal__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/*.modal__wrap {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  min-height: 100%; }
-
-.modal__inner {
+  min-height: 100%;
+}*/
+.modal__wrap {
+  margin: auto;
   padding: 80px 47px;
   width: 480px;
+  height: 450px;
   text-align: center;
   -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
           box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   background-color: #ffffff; }
   @media (max-width: 767px) {
-    .modal__inner {
+    .modal__wrap {
       width: 320px; } }
 
 .modal__title {
