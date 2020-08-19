@@ -132,9 +132,10 @@
   height: 65px;
   border-radius: 50%;
   border: 0;
+  padding: 0;
   background-color: $color-accent;
   cursor: pointer;
-  transition: $default-transition;
+  transition: opacity $default-transition;
   overflow: hidden;
 
   &:hover,
