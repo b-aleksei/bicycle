@@ -1057,13 +1057,6 @@ body {
     pointer-events: auto;
     z-index: 10; }
 
-/*.modal__wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 100%;
-}*/
 .modal__wrap {
   margin: auto;
   padding: 80px 47px;
