@@ -458,8 +458,10 @@ body {
   overflow: hidden; }
   .form button[type="submit"]:hover {
     background-color: rgba(10, 217, 198, 0.7); }
-  .form button[type="submit"]:active, .form button[type="submit"]:focus {
+  .form button[type="submit"]:active {
     color: #ffffff;
+    background-color: rgba(10, 217, 198, 0.7); }
+  .form button[type="submit"]:focus {
     background-color: rgba(10, 217, 198, 0.7); }
 
 @media (max-width: 1023px) {

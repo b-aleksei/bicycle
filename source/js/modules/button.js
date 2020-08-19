@@ -1,4 +1,3 @@
-
 const addElement = function (e) {
   const button = e.currentTarget;
   const el = e.currentTarget.lastElementChild;
@@ -8,8 +7,13 @@ const addElement = function (e) {
   el.classList.remove('pulse');
   setTimeout(() => {
     let rect = button.getBoundingClientRect();
-    el.style.left = e.clientX - rect.left - mValue / 2 + 'px';
-    el.style.top = e.clientY - rect.top - mValue / 2 + 'px';
+    if (!e.clientX) {
+      el.style.left = 0 + 'px';
+      el.style.top = rect.height / 2 - mValue / 2 + 'px';
+    } else {
+      el.style.left = e.clientX - rect.left - mValue / 2 + 'px';
+      el.style.top = e.clientY - rect.top - mValue / 2 + 'px';
+    }
     el.classList.add('pulse');
   });
 };

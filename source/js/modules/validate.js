@@ -1,14 +1,10 @@
 import initPhoneMask from './phoneMask';
-import openClosePopup from './modal';
+import focusTrapOne from './modal';
 
 const phoneInput = document.querySelector('input[name=phone]');
 const regExpName = /^[\s-]+$|^\s*-+|[^A-Za-zА-Яа-я\-.\s']+/;
 const forms = document.querySelectorAll('form');
-const successSend = {
-  overlay: document.querySelector('.modal'),
-  classActive: 'modal--active',
-  buttonsClose: document.querySelectorAll('.modal__close'),
-};
+
 const signSuccess = '' +
 '<span class="form__input-valid">' +
   '<svg width="20" height="18">' +
@@ -70,7 +66,7 @@ const onSubmit = function (e) {
       input.parentElement.classList.remove('form__valid');
     }
   }
-  openClosePopup(successSend);
+  focusTrapOne.activate();
   setTimeout(function () {
     form.reset();
   });

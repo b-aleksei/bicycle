@@ -81,9 +81,12 @@
     background-color: $color-btn-hover;
   }
 
-  &:active,
-  &:focus {
+  &:active {
     color: $color-default-white;
+    background-color: $color-btn-hover;
+  }
+
+  &:focus {
     background-color: $color-btn-hover;
   }
 }
