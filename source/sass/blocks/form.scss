@@ -40,26 +40,16 @@
 .form__input-valid {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(0);
   right: 5px;
   overflow: hidden;
   width: 20px;
   height: 18px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $color-default-white;
-    transition: transform $default-transition;
-  }
+  transition: transform $default-transition;
 }
 
-.form__valid .form__input-valid::after {
-  transform: translate(100%);
+.form__valid .form__input-valid {
+  transform: translateY(-50%) scale(1);
 }
 
 .form button[type="submit"] {
