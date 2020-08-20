@@ -59,23 +59,20 @@ const deleteHandler = function (e) {
 const onSubmit = function (e) {
   e.preventDefault();
   const form = e.currentTarget;
-  for (let i = 0; i < form.elements.length; i++) {
-    let input = form.elements[i];
+  Array.prototype.forEach.call(form.elements, (input) => {
     if (input.dataset.validate) {
       localStorage.setItem(input.name, input.value);
       input.parentElement.classList.remove('form__valid');
     }
-  }
-  focusTrapOne.activate();
-  setTimeout(function () {
-    form.reset();
   });
+  focusTrapOne.activate(); // вызов модального окна
+  setTimeout(() => form.reset());
 };
 
 try {
 // валидация форм на главной странице
   forms.forEach(function (form) {
-    form.querySelectorAll('input').forEach((input) => {
+    Array.prototype.forEach.call(form.elements, (input) => {
       if (input.dataset.validate) {
         let value = localStorage.getItem(input.name);
         if (value) {

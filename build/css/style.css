@@ -419,28 +419,20 @@ body {
 .form__input-valid {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) scale(0);
+          transform: translateY(-50%) scale(0);
   right: 5px;
   overflow: hidden;
   width: 20px;
-  height: 18px; }
-  .form__input-valid::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ffffff;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s; }
+  height: 18px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; }
 
-.form__valid .form__input-valid::after {
-  -webkit-transform: translate(100%);
-          transform: translate(100%); }
+.form__valid .form__input-valid {
+  -webkit-transform: translateY(-50%) scale(1);
+          transform: translateY(-50%) scale(1); }
 
 .form button[type="submit"] {
   position: relative;

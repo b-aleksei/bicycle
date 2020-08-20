@@ -10,7 +10,7 @@ const onInputPhoneInput = ({target}) => {
   }
 
   target.value = '';
-  Array.from(matrix).forEach((item) => {
+  Array.prototype.forEach.call(matrix, (item) => {
     let isValNumber = /[_\d]/.test(item) && val.length > i;
     if (isValNumber) {
       target.value += val.charAt(i++);
