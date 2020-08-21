@@ -1,42 +1,31 @@
-const goToTarget = function (target) { // фолбэк для ie11
-  const y = target.offsetTop;
+const ua = window.navigator.userAgent.toLowerCase();
+const isIe = (/trident/gi).test(ua) || (/msie/gi).test(ua);
 
-  const moveTo = function () {
-    if (window.pageYOffset < y) {
-      window.scrollBy(0, 60);
-      setTimeout(moveTo);
-    }
+if (isIe) {
+
+  const makeSmoothScroll = function (link) {
+
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      let targetId = link.getAttribute('href');
+      let target = document.querySelector(targetId);
+
+      if (target) {
+        const moveTo = function () {
+          if (window.pageYOffset < target.offsetTop) {
+            window.scrollBy(0, 60);
+            setTimeout(moveTo);
+          }
+        };
+
+        moveTo();
+      }
+    });
   };
 
-  moveTo();
-};
-
-const makeSmoothScroll = function (link) {
-
-  link.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    let targetId = link.getAttribute('href');
-    let target = document.querySelector(targetId);
-
-
-    try {
-      if (target) {
-
-        if (!Promise) { // примитивная проверка для ie 11
-          goToTarget(target);
-        } else {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-          });
-        }
-      }
-    } catch (er) {
-      // console.log(er);
-    }
-  });
-};
-
-const links = document.querySelectorAll('.nav__link');
-links.forEach((link) => makeSmoothScroll(link));
+  const links = document.querySelectorAll('.nav__link');
+  if (links.length) {
+    links.forEach((link) => makeSmoothScroll(link));
+  }
+}

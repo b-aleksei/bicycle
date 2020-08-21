@@ -1,13 +1,5 @@
 .variety {
-  margin-top: 276px;
-
-  @media (max-width: $viewport--lg) {
-    margin-top: 100px;
-  }
-
-  @media (max-width: $viewport--md) {
-    margin-top: 0;
-  }
+  scroll-snap-align: start;
 }
 
 .variety h2 {

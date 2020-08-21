@@ -3,6 +3,7 @@
   margin-top: 100px;
   padding-left: calc(100% * 0.172);
   padding-right: calc(100% * 0.172);
+  scroll-snap-align: start;
 
   @media (max-width: $viewport--lg) {
     margin-top: 20px;

@@ -1,6 +1,7 @@
 .contact {
   max-width: 957px;
   margin: 144px auto 0 auto;
+  scroll-snap-align: start;
 
   @media (max-width: $viewport--lg) {
     max-width: 698px;
