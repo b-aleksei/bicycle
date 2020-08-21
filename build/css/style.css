@@ -27,7 +27,8 @@
 
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 body {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -479,11 +480,16 @@ body {
 
 .about-us {
   max-width: 1440px;
-  margin: 150px auto 0 auto;
-  letter-spacing: -0.04em; }
+  margin: 150px auto 276px auto;
+  letter-spacing: -0.04em;
+  scroll-snap-align: start; }
   @media (max-width: 1023px) {
     .about-us {
-      margin-top: 70px; } }
+      margin-top: 70px;
+      margin-bottom: 100px; } }
+  @media (max-width: 767px) {
+    .about-us {
+      margin-bottom: 0; } }
 
 .about-us h2 {
   font-size: 30px;
@@ -565,13 +571,7 @@ body {
     margin-top: 6px; } }
 
 .variety {
-  margin-top: 276px; }
-  @media (max-width: 1023px) {
-    .variety {
-      margin-top: 100px; } }
-  @media (max-width: 767px) {
-    .variety {
-      margin-top: 0; } }
+  scroll-snap-align: start; }
 
 .variety h2 {
   margin-right: 11px;
@@ -735,7 +735,8 @@ body {
   position: relative;
   margin-top: 100px;
   padding-left: calc(100% * 0.172);
-  padding-right: calc(100% * 0.172); }
+  padding-right: calc(100% * 0.172);
+  scroll-snap-align: start; }
   @media (max-width: 1023px) {
     .video {
       margin-top: 20px; } }
@@ -875,7 +876,8 @@ body {
 
 .contact {
   max-width: 957px;
-  margin: 144px auto 0 auto; }
+  margin: 144px auto 0 auto;
+  scroll-snap-align: start; }
   @media (max-width: 1023px) {
     .contact {
       max-width: 698px;
