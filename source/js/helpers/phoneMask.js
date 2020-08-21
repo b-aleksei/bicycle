@@ -1,3 +1,5 @@
+import checkValue from './checkValidity';
+
 const COUNTRY_CODE = '+7';
 
 const onInputPhoneInput = ({target}) => {
@@ -18,6 +20,8 @@ const onInputPhoneInput = ({target}) => {
       target.value += val.length <= i ? '' : item;
     }
   });
+
+  checkValue(target);
 };
 
 const onFocusPhoneInput = ({target}) => {
@@ -36,8 +40,4 @@ const onBlurPhoneInput = ({target}) => {
   target.removeEventListener('blur', onBlurPhoneInput);
 };
 
-const initPhoneMask = (input) => {
-  input.addEventListener('focus', onFocusPhoneInput);
-};
-
-export default initPhoneMask;
+export default onFocusPhoneInput;
